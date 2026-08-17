@@ -140,11 +140,6 @@
     margin-right: 6px;
     animation: glow-pulse 2s ease-in-out infinite;
   }
-  .blob {
-    animation: blob-morph 8s ease-in-out infinite;
-    background: linear-gradient(135deg, rgba(207,106,62,0.15), rgba(232,154,112,0.1));
-    filter: blur(40px);
-  }
   .stagger-1 { animation-delay: 0.1s; }
   .stagger-2 { animation-delay: 0.2s; }
   .stagger-3 { animation-delay: 0.3s; }
@@ -172,9 +167,6 @@
 
 <div align="center">
 
-<!-- ====== ANIMATED BLOB BACKGROUND ====== -->
-<div style="position:relative;width:100%;overflow:hidden;">
-
 <!-- ====== HERO SECTION ====== -->
 <div style="animation: scale-in 0.8s cubic-bezier(0.16,1,0.3,1) both; padding: 40px 0 20px;">
 
@@ -182,11 +174,11 @@
 <div style="position:relative;display:inline-block;width:130px;height:130px;">
   <div style="position:absolute;inset:-4px;border-radius:50%;background:conic-gradient(from 0deg,#cf6a3e,#e89a70,#cf6a3e,#e2a070,#cf6a3e);animation:spin-slow 4s linear infinite;"></div>
   <div style="position:absolute;inset:0;border-radius:50%;background:#1b1512;"></div>
-  <img src="https://avatars.githubusercontent.com/u/kamalesh4044" width="120" height="120" style="position:absolute;top:5px;left:5px;border-radius:50%;object-fit:cover;" alt="Kamalesh" />
+  <img src="https://github.com/kamalesh4044.png" width="120" height="120" style="position:absolute;top:5px;left:5px;border-radius:50%;object-fit:cover;" alt="Kamalesh" />
 </div>
 
 <h1 style="margin-top:16px;font-family:'Segoe UI',system-ui,sans-serif;">
-  <span style="animation:slide-in-up 0.6s 0.2s cubic-bezier(0.16,1,0.3,1) both;display:block;font-size:40px;font-weight:800;background:linear-gradient(135deg,#cf6a3e,#e89a70,#cf6a3e);background-size:200% auto;animation:gradient-shift 3s ease infinite,slide-in-up 0.6s 0.2s cubic-bezier(0.16,1,0.3,1) both;color:transparent;-webkit-background-clip:text;background-clip:text;letter-spacing:-1px;">
+  <span style="display:block;font-size:40px;font-weight:800;background:linear-gradient(135deg,#cf6a3e,#e89a70,#cf6a3e);background-size:200% auto;color:transparent;-webkit-background-clip:text;background-clip:text;letter-spacing:-1px;animation:gradient-shift 3s ease infinite,slide-in-up 0.6s 0.2s cubic-bezier(0.16,1,0.3,1) both;">
     Kamalesh Kumar A.
   </span>
 </h1>
