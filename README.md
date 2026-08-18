@@ -36,12 +36,10 @@
 
 I'm a **CS student** and builder at heart. My world revolves around
 **real-time multiplayer systems**, **AI-powered applications**, and **creative web experiences**.
-I don't just write code — I architect **performant, elegant products** that ship and scale.
 
 - Currently building **SkillWarz** — a competitive multiplayer FPS engine
 - Learning **Rust** and exploring **WebAssembly** for performance-critical web apps
 - Ask me about **real-time networking**, **AI inference**, or **game engines**
-- Outside code: **drifting in Madras Drift** and exploring **evolutionary algorithms**
 
 </div>
 
@@ -91,21 +89,19 @@ I don't just write code — I architect **performant, elegant products** that sh
 
 </div>
 
-<br/>
-
 ---
 
-#### `> cd projects/game-dev/`
+<details open>
+<summary><b>&#x1f3ae; Game Development</b></summary>
+<br/>
 
 <table>
 <tr>
 <td align="center" width="50%">
 <a href="https://multiplayer-fps-game.onrender.com">
-<img src="https://capsule-render.vercel.app/api?type=venom&color=0:0d1117,50:7c3aed,100:0d1117&height=80&section=header&text=SkillWarz+FPS&fontSize=20&fontColor=f0f0f0&fontAlignY=50&stroke=7c3aed" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=venom&color=0:0d1117,50:7c3aed,100:0d1117&height=70&section=header&text=SkillWarz+FPS&fontSize=18&fontColor=f0f0f0&fontAlignY=50&stroke=7c3aed" width="100%" />
 </a>
 <br/>
-<b>Real-time multiplayer FPS</b>
-<br/><br/>
 <img src="https://img.shields.io/badge/JS-Node.js-WebSocket-Three.js-7C3AED?style=flat-square&labelColor=0d1117" />
 <br/><br/>
 <a href="https://multiplayer-fps-game.onrender.com"><img src="https://img.shields.io/badge/PLAY_LIVE-06d6a0?style=flat-square&labelColor=0d1112" /></a>
@@ -114,12 +110,10 @@ I don't just write code — I architect **performant, elegant products** that sh
 </td>
 <td align="center" width="50%">
 <a href="https://github.com/kamalesh4044/Madras-Drift">
-<img src="https://capsule-render.vercel.app/api?type=venom&color=0:0d1117,50:7c3aed,100:0d1117&height=80&section=header&text=Madras+Drift&fontSize=20&fontColor=f0f0f0&fontAlignY=50&stroke=7c3aed" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=venom&color=0:0d1117,50:ff6b6b,100:0d1117&height=70&section=header&text=Madras+Drift&fontSize=18&fontColor=f0f0f0&fontAlignY=50&stroke=ff6b6b" width="100%" />
 </a>
 <br/>
-<b>Open-world driving game in Godot</b>
-<br/><br/>
-<img src="https://img.shields.io/badge/GDScript-Godot_4-Open_World-ff6b6b?style=flat-square&labelColor=0d1117" />
+<img src="https://img.shields.io/badge/GDScript-Godot_4-Open+World-ff6b6b?style=flat-square&labelColor=0d1117" />
 <br/><br/>
 <a href="https://github.com/kamalesh4044/Madras-Drift"><img src="https://img.shields.io/badge/SRC-555?style=flat-square&labelColor=0d1112" /></a>
 <img src="https://img.shields.io/github/stars/kamalesh4044/Madras-Drift?style=social" />
@@ -127,70 +121,61 @@ I don't just write code — I architect **performant, elegant products** that sh
 </tr>
 <tr>
 <td align="center" width="50%">
-<a href="https://github.com/kamalesh4044/evodot">
-<img src="https://capsule-render.vercel.app/api?type=venom&color=0:0d1117,50:7c3aed,100:0d1117&height=80&section=header&text=EvoDot&fontSize=20&fontColor=f0f0f0&fontAlignY=50&stroke=7c3aed" width="100%" />
+<a href="https://void-runner-seven.vercel.app">
+<img src="https://capsule-render.vercel.app/api?type=venom&color=0:0d1117,50:06d6a0,100:0d1117&height=70&section=header&text=Void+Runner&fontSize=18&fontColor=f0f0f0&fontAlignY=50&stroke=06d6a0" width="100%" />
 </a>
 <br/>
-<b>Evolutionary algorithm ecosystem</b>
+<img src="https://img.shields.io/badge/JS-Three.js-Vercel-06d6a0?style=flat-square&labelColor=0d1117" />
 <br/><br/>
-<img src="https://img.shields.io/badge/GDScript-Godot_4-Multiplayer-06d6a0?style=flat-square&labelColor=0d1117" />
+<a href="https://void-runner-seven.vercel.app"><img src="https://img.shields.io/badge/PLAY_LIVE-06d6a0?style=flat-square&labelColor=0d1112" /></a>
+</td>
+<td align="center" width="50%">
+<a href="https://github.com/kamalesh4044/velocity.io">
+<img src="https://capsule-render.vercel.app/api?type=venom&color=0:0d1117,50:ffd166,100:0d1117&height=70&section=header&text=Velocity.io&fontSize=18&fontColor=f0f0f0&fontAlignY=50&stroke=ffd166" width="100%" />
+</a>
+<br/>
+<img src="https://img.shields.io/badge/JS-Three.js-Rapier3D-Socket.io-ffd166?style=flat-square&labelColor=0d1117" />
+<br/><br/>
+<a href="https://github.com/kamalesh4044/velocity.io"><img src="https://img.shields.io/badge/SRC-555?style=flat-square&labelColor=0d1112" /></a>
+<img src="https://img.shields.io/github/stars/kamalesh4044/velocity.io?style=social" />
+</td>
+</tr>
+<tr>
+<td align="center" width="50%">
+<a href="https://github.com/kamalesh4044/evodot">
+<img src="https://capsule-render.vercel.app/api?type=venom&color=0:0d1117,50:7c3aed,100:0d1117&height=70&section=header&text=EvoDot&fontSize=18&fontColor=f0f0f0&fontAlignY=50&stroke=7c3aed" width="100%" />
+</a>
+<br/>
+<img src="https://img.shields.io/badge/GDScript-Godot_4-Multiplayer-7C3AED?style=flat-square&labelColor=0d1117" />
 <br/><br/>
 <a href="https://github.com/kamalesh4044/evodot"><img src="https://img.shields.io/badge/SRC-555?style=flat-square&labelColor=0d1112" /></a>
 <img src="https://img.shields.io/github/stars/kamalesh4044/evodot?style=social" />
 </td>
 <td align="center" width="50%">
-<a href="https://void-runner-seven.vercel.app">
-<img src="https://capsule-render.vercel.app/api?type=venom&color=0:0d1117,50:7c3aed,100:0d1117&height=80&section=header&text=Void+Runner&fontSize=20&fontColor=f0f0f0&fontAlignY=50&stroke=7c3aed" width="100%" />
-</a>
-<br/>
-<b>Procedural endless runner</b>
-<br/><br/>
-<img src="https://img.shields.io/badge/JS-Three.js-Vercel-ff6b6b?style=flat-square&labelColor=0d1117" />
-<br/><br/>
-<a href="https://void-runner-seven.vercel.app"><img src="https://img.shields.io/badge/PLAY_LIVE-06d6a0?style=flat-square&labelColor=0d1112" /></a>
-</td>
-</tr>
-<tr>
-<td align="center" width="50%">
-<a href="https://github.com/kamalesh4044/velocity.io">
-<img src="https://capsule-render.vercel.app/api?type=venom&color=0:0d1117,50:7c3aed,100:0d1117&height=80&section=header&text=Velocity.io&fontSize=20&fontColor=f0f0f0&fontAlignY=50&stroke=7c3aed" width="100%" />
-</a>
-<br/>
-<b>Competitive multiplayer browser FPS</b>
-<br/><br/>
-<img src="https://img.shields.io/badge/JS-Three.js-Rapier3D-Socket.io-7C3AED?style=flat-square&labelColor=0d1117" />
-<br/><br/>
-<a href="https://github.com/kamalesh4044/velocity.io"><img src="https://img.shields.io/badge/SRC-555?style=flat-square&labelColor=0d1112" /></a>
-<img src="https://img.shields.io/github/stars/kamalesh4044/velocity.io?style=social" />
-</td>
-<td align="center" width="50%">
 <a href="https://github.com/kamalesh4044/project_IGI">
-<img src="https://capsule-render.vercel.app/api?type=venom&color=0:0d1117,50:7c3aed,100:0d1117&height=80&section=header&text=Project+IGI&fontSize=20&fontColor=f0f0f0&fontAlignY=50&stroke=7c3aed" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=venom&color=0:0d1117,50:ff6b6b,100:0d1117&height=70&section=header&text=Project+IGI&fontSize=18&fontColor=f0f0f0&fontAlignY=50&stroke=ff6b6b" width="100%" />
 </a>
 <br/>
-<b>Classic FPS remake with WebGL</b>
-<br/><br/>
-<img src="https://img.shields.io/badge/TS-WebGL-3D_Rendering-06d6a0?style=flat-square&labelColor=0d1117" />
+<img src="https://img.shields.io/badge/TS-WebGL-3D_Rendering-ff6b6b?style=flat-square&labelColor=0d1117" />
 <br/><br/>
 <a href="https://github.com/kamalesh4044/project_IGI"><img src="https://img.shields.io/badge/SRC-555?style=flat-square&labelColor=0d1112" /></a>
 <img src="https://img.shields.io/github/stars/kamalesh4044/project_IGI?style=social" />
 </td>
 </tr>
 </table>
+</details>
 
----
-
-#### `> cd projects/ai-ml/`
+<details>
+<summary><b>&#x1f916; AI / Machine Learning</b></summary>
+<br/>
 
 <table>
 <tr>
 <td align="center" width="50%">
 <a href="https://github.com/kamalesh4044/SmartVisionGuard">
-<img src="https://capsule-render.vercel.app/api?type=venom&color=0:0d1117,50:06d6a0,100:0d1117&height=80&section=header&text=SmartVisionGuard&fontSize=20&fontColor=f0f0f0&fontAlignY=50&stroke=06d6a0" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=venom&color=0:0d1117,50:06d6a0,100:0d1117&height=70&section=header&text=SmartVisionGuard&fontSize=18&fontColor=f0f0f0&fontAlignY=50&stroke=06d6a0" width="100%" />
 </a>
 <br/>
-<b>Real-time AI safety vision system</b>
-<br/><br/>
 <img src="https://img.shields.io/badge/Python-YOLO11-FastAPI-OpenCV-06d6a0?style=flat-square&labelColor=0d1117" />
 <br/><br/>
 <a href="https://github.com/kamalesh4044/SmartVisionGuard"><img src="https://img.shields.io/badge/SRC-555?style=flat-square&labelColor=0d1112" /></a>
@@ -198,12 +183,10 @@ I don't just write code — I architect **performant, elegant products** that sh
 </td>
 <td align="center" width="50%">
 <a href="https://github.com/kamalesh4044/secforge">
-<img src="https://capsule-render.vercel.app/api?type=venom&color=0:0d1117,50:06d6a0,100:0d1117&height=80&section=header&text=SecForge&fontSize=20&fontColor=f0f0f0&fontAlignY=50&stroke=06d6a0" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=venom&color=0:0d1117,50:ff6b6b,100:0d1117&height=70&section=header&text=SecForge&fontSize=18&fontColor=f0f0f0&fontAlignY=50&stroke=ff6b6b" width="100%" />
 </a>
 <br/>
-<b>Security LLM fine-tuning with QLoRA</b>
-<br/><br/>
-<img src="https://img.shields.io/badge/Python-QLoRA-Transformers-PEFT-06d6a0?style=flat-square&labelColor=0d1117" />
+<img src="https://img.shields.io/badge/Python-QLoRA-Transformers-PEFT-ff6b6b?style=flat-square&labelColor=0d1117" />
 <br/><br/>
 <a href="https://github.com/kamalesh4044/secforge"><img src="https://img.shields.io/badge/SRC-555?style=flat-square&labelColor=0d1112" /></a>
 <img src="https://img.shields.io/github/stars/kamalesh4044/secforge?style=social" />
@@ -212,24 +195,20 @@ I don't just write code — I architect **performant, elegant products** that sh
 <tr>
 <td align="center" width="50%">
 <a href="https://github.com/kamalesh4044/ByteBrain">
-<img src="https://capsule-render.vercel.app/api?type=venom&color=0:0d1117,50:06d6a0,100:0d1117&height=80&section=header&text=ByteBrain&fontSize=20&fontColor=f0f0f0&fontAlignY=50&stroke=06d6a0" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=venom&color=0:0d1117,50:ffd166,100:0d1117&height=70&section=header&text=ByteBrain&fontSize=18&fontColor=f0f0f0&fontAlignY=50&stroke=ffd166" width="100%" />
 </a>
 <br/>
-<b>Private in-browser AI Study Companion</b>
-<br/><br/>
-<img src="https://img.shields.io/badge/TS-WebLLM-Privacy_First-06d6a0?style=flat-square&labelColor=0d1117" />
+<img src="https://img.shields.io/badge/TS-WebLLM-Privacy_First-ffd166?style=flat-square&labelColor=0d1117" />
 <br/><br/>
 <a href="https://github.com/kamalesh4044/ByteBrain"><img src="https://img.shields.io/badge/SRC-555?style=flat-square&labelColor=0d1112" /></a>
 <img src="https://img.shields.io/github/stars/kamalesh4044/ByteBrain?style=social" />
 </td>
 <td align="center" width="50%">
 <a href="https://github.com/kamalesh4044/jarvis-agent">
-<img src="https://capsule-render.vercel.app/api?type=venom&color=0:0d1117,50:06d6a0,100:0d1117&height=80&section=header&text=Jarvis+Agent&fontSize=20&fontColor=f0f0f0&fontAlignY=50&stroke=06d6a0" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=venom&color=0:0d1117,50:7c3aed,100:0d1117&height=70&section=header&text=Jarvis+Agent&fontSize=18&fontColor=f0f0f0&fontAlignY=50&stroke=7c3aed" width="100%" />
 </a>
 <br/>
-<b>AI automation assistant with voice</b>
-<br/><br/>
-<img src="https://img.shields.io/badge/Python-AI_Agent-Voice-Automation-06d6a0?style=flat-square&labelColor=0d1117" />
+<img src="https://img.shields.io/badge/Python-AI_Agent-Voice-Automation-7C3AED?style=flat-square&labelColor=0d1117" />
 <br/><br/>
 <a href="https://github.com/kamalesh4044/jarvis-agent"><img src="https://img.shields.io/badge/SRC-555?style=flat-square&labelColor=0d1112" /></a>
 <img src="https://img.shields.io/github/stars/kamalesh4044/jarvis-agent?style=social" />
@@ -238,11 +217,9 @@ I don't just write code — I architect **performant, elegant products** that sh
 <tr>
 <td align="center" width="50%">
 <a href="https://github.com/kamalesh4044/crowd_detection">
-<img src="https://capsule-render.vercel.app/api?type=venom&color=0:0d1117,50:06d6a0,100:0d1117&height=80&section=header&text=CrowdSafe+AI&fontSize=20&fontColor=f0f0f0&fontAlignY=50&stroke=06d6a0" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=venom&color=0:0d1117,50:06d6a0,100:0d1117&height=70&section=header&text=CrowdSafe+AI&fontSize=18&fontColor=f0f0f0&fontAlignY=50&stroke=06d6a0" width="100%" />
 </a>
 <br/>
-<b>Crowd monitoring & stampede prediction</b>
-<br/><br/>
 <img src="https://img.shields.io/badge/Python-CV-Deep_Learning-06d6a0?style=flat-square&labelColor=0d1117" />
 <br/><br/>
 <a href="https://github.com/kamalesh4044/crowd_detection"><img src="https://img.shields.io/badge/SRC-555?style=flat-square&labelColor=0d1112" /></a>
@@ -250,183 +227,65 @@ I don't just write code — I architect **performant, elegant products** that sh
 </td>
 <td align="center" width="50%">
 <a href="https://github.com/kamalesh4044/Ai-Predictive-Analytics">
-<img src="https://capsule-render.vercel.app/api?type=venom&color=0:0d1117,50:06d6a0,100:0d1117&height=80&section=header&text=Predictive+Analytics&fontSize=20&fontColor=f0f0f0&fontAlignY=50&stroke=06d6a0" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=venom&color=0:0d1117,50:ff6b6b,100:0d1117&height=70&section=header&text=Predictive+Analytics&fontSize=18&fontColor=f0f0f0&fontAlignY=50&stroke=ff6b6b" width="100%" />
 </a>
 <br/>
-<b>ML-powered predictive data analytics</b>
-<br/><br/>
-<img src="https://img.shields.io/badge/Python-Scikit_Learn-Pandas-06d6a0?style=flat-square&labelColor=0d1117" />
+<img src="https://img.shields.io/badge/Python-Scikit_Learn-Pandas-ff6b6b?style=flat-square&labelColor=0d1117" />
 <br/><br/>
 <a href="https://github.com/kamalesh4044/Ai-Predictive-Analytics"><img src="https://img.shields.io/badge/SRC-555?style=flat-square&labelColor=0d1112" /></a>
 </td>
 </tr>
 </table>
+</details>
 
----
-
-#### `> cd projects/web-dev/`
+<details>
+<summary><b>&#x1f310; Web & Apps</b></summary>
+<br/>
 
 <table>
 <tr>
 <td align="center" width="50%">
-<a href="https://github.com/kamalesh4044/velocity.io">
-<img src="https://capsule-render.vercel.app/api?type=venom&color=0:0d1117,50:ff6b6b,100:0d1117&height=80&section=header&text=Social+Media&fontSize=20&fontColor=f0f0f0&fontAlignY=50&stroke=ff6b6b" width="100%" />
-</a>
-<br/>
-<b>Real-time social network with messaging</b>
-<br/><br/>
-<img src="https://img.shields.io/badge/JS-WebSocket-MongoDB-ff6b6b?style=flat-square&labelColor=0d1117" />
-<br/><br/>
-<a href="https://github.com/kamalesh4044"><img src="https://img.shields.io/badge/SRC-555?style=flat-square&labelColor=0d1112" /></a>
-</td>
-<td align="center" width="50%">
 <a href="https://github.com/kamalesh4044/RAG-Chatbot">
-<img src="https://capsule-render.vercel.app/api?type=venom&color=0:0d1117,50:ff6b6b,100:0d1117&height=80&section=header&text=RAG+Chatbot&fontSize=20&fontColor=f0f0f0&fontAlignY=50&stroke=ff6b6b" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=venom&color=0:0d1117,50:06d6a0,100:0d1117&height=70&section=header&text=RAG+Chatbot&fontSize=18&fontColor=f0f0f0&fontAlignY=50&stroke=06d6a0" width="100%" />
 </a>
 <br/>
-<b>Retrieval-augmented generation chatbot</b>
-<br/><br/>
-<img src="https://img.shields.io/badge/Python-LangChain-VectorDB-ff6b6b?style=flat-square&labelColor=0d1117" />
+<img src="https://img.shields.io/badge/Python-LangChain-VectorDB-06d6a0?style=flat-square&labelColor=0d1117" />
 <br/><br/>
 <a href="https://github.com/kamalesh4044/RAG-Chatbot"><img src="https://img.shields.io/badge/SRC-555?style=flat-square&labelColor=0d1112" /></a>
+</td>
+<td align="center" width="50%">
+<a href="https://github.com/kamalesh4044/weather-Fusion">
+<img src="https://capsule-render.vercel.app/api?type=venom&color=0:0d1117,50:7c3aed,100:0d1117&height=70&section=header&text=Weather+Fusion&fontSize=18&fontColor=f0f0f0&fontAlignY=50&stroke=7c3aed" width="100%" />
+</a>
+<br/>
+<img src="https://img.shields.io/badge/HTML-CSS-JS-API-7C3AED?style=flat-square&labelColor=0d1117" />
+<br/><br/>
+<a href="https://github.com/kamalesh4044/weather-Fusion"><img src="https://img.shields.io/badge/SRC-555?style=flat-square&labelColor=0d1112" /></a>
 </td>
 </tr>
 <tr>
 <td align="center" width="50%">
-<a href="https://github.com/kamalesh4044/weather-Fusion">
-<img src="https://capsule-render.vercel.app/api?type=venom&color=0:0d1117,50:ff6b6b,100:0d1117&height=80&section=header&text=Weather+Fusion&fontSize=20&fontColor=f0f0f0&fontAlignY=50&stroke=ff6b6b" width="100%" />
-</a>
-<br/>
-<b>Beautiful weather data visualization</b>
-<br/><br/>
-<img src="https://img.shields.io/badge/HTML-CSS-JS-API-ff6b6b?style=flat-square&labelColor=0d1117" />
-<br/><br/>
-<a href="https://github.com/kamalesh4044/weather-Fusion"><img src="https://img.shields.io/badge/SRC-555?style=flat-square&labelColor=0d1112" /></a>
-</td>
-<td align="center" width="50%">
 <a href="https://github.com/kamalesh4044/AI-Terminal-Chat">
-<img src="https://capsule-render.vercel.app/api?type=venom&color=0:0d1117,50:ff6b6b,100:0d1117&height=80&section=header&text=AI+Terminal+Chat&fontSize=20&fontColor=f0f0f0&fontAlignY=50&stroke=ff6b6b" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=venom&color=0:0d1117,50:ff6b6b,100:0d1117&height=70&section=header&text=AI+Terminal+Chat&fontSize=18&fontColor=f0f0f0&fontAlignY=50&stroke=ff6b6b" width="100%" />
 </a>
 <br/>
-<b>Streaming terminal AI with sessions</b>
-<br/><br/>
 <img src="https://img.shields.io/badge/TS-Node.js-Streaming-ff6b6b?style=flat-square&labelColor=0d1117" />
 <br/><br/>
 <a href="https://github.com/kamalesh4044/AI-Terminal-Chat"><img src="https://img.shields.io/badge/SRC-555?style=flat-square&labelColor=0d1112" /></a>
 </td>
-</tr>
-</table>
-
----
-
-#### `> cd projects/android/`
-
-<table>
-<tr>
 <td align="center" width="50%">
 <a href="https://github.com/kamalesh4044/BLE-Advertise">
-<img src="https://capsule-render.vercel.app/api?type=venom&color=0:0d1117,50:ffd166,100:0d1117&height=80&section=header&text=BLE-Advertise&fontSize=20&fontColor=f0f0f0&fontAlignY=50&stroke=ffd166" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=venom&color=0:0d1117,50:ffd166,100:0d1117&height=70&section=header&text=BLE-Advertise&fontSize=18&fontColor=f0f0f0&fontAlignY=50&stroke=ffd166" width="100%" />
 </a>
 <br/>
-<b>Bluetooth security research tool</b>
-<br/><br/>
 <img src="https://img.shields.io/badge/Kotlin-Android-Bluetooth-Security-ffd166?style=flat-square&labelColor=0d1117" />
 <br/><br/>
 <a href="https://github.com/kamalesh4044/BLE-Advertise"><img src="https://img.shields.io/badge/SRC-555?style=flat-square&labelColor=0d1112" /></a>
 <img src="https://img.shields.io/github/stars/kamalesh4044/BLE-Advertise?style=social" />
 </td>
-<td align="center" width="50%">
-<a href="https://github.com/kamalesh4044/AudioBridge">
-<img src="https://capsule-render.vercel.app/api?type=venom&color=0:0d1117,50:ffd166,100:0d1117&height=80&section=header&text=AudioBridge&fontSize=20&fontColor=f0f0f0&fontAlignY=50&stroke=ffd166" width="100%" />
-</a>
-<br/>
-<b>Cross-platform audio bridge system</b>
-<br/><br/>
-<img src="https://img.shields.io/badge/Kotlin-Android-Audio-ffd166?style=flat-square&labelColor=0d1117" />
-<br/><br/>
-<a href="https://github.com/kamalesh4044/AudioBridge"><img src="https://img.shields.io/badge/SRC-555?style=flat-square&labelColor=0d1112" /></a>
-</td>
-</tr>
-<tr>
-<td align="center" width="50%">
-<a href="https://github.com/kamalesh4044/Gyrocam">
-<img src="https://capsule-render.vercel.app/api?type=venom&color=0:0d1117,50:ffd166,100:0d1117&height=80&section=header&text=Gyrocam&fontSize=20&fontColor=f0f0f0&fontAlignY=50&stroke=ffd166" width="100%" />
-</a>
-<br/>
-<b>Pro camera app with IMU metadata</b>
-<br/><br/>
-<img src="https://img.shields.io/badge/Kotlin-Android-Camera-IMU-ffd166?style=flat-square&labelColor=0d1117" />
-<br/><br/>
-<a href="https://github.com/kamalesh4044/Gyrocam"><img src="https://img.shields.io/badge/SRC-555?style=flat-square&labelColor=0d1112" /></a>
-</td>
-<td align="center" width="50%">
-<a href="https://github.com/kamalesh4044/BLE-Signal">
-<img src="https://capsule-render.vercel.app/api?type=venom&color=0:0d1117,50:ffd166,100:0d1117&height=80&section=header&text=BLE+Signal&fontSize=20&fontColor=f0f0f0&fontAlignY=50&stroke=ffd166" width="100%" />
-</a>
-<br/>
-<b>Bluetooth signal analysis tool</b>
-<br/><br/>
-<img src="https://img.shields.io/badge/Kotlin-Android-Bluetooth-Analysis-ffd166?style=flat-square&labelColor=0d1117" />
-<br/><br/>
-<a href="https://github.com/kamalesh4044/BLE-Signal"><img src="https://img.shields.io/badge/SRC-555?style=flat-square&labelColor=0d1112" /></a>
-</td>
 </tr>
 </table>
-
----
-
-#### `> cd projects/tools/`
-
-<table>
-<tr>
-<td align="center" width="50%">
-<a href="https://github.com/kamalesh4044/PC-Auto">
-<img src="https://capsule-render.vercel.app/api?type=venom&color=0:0d1117,50:b0b0b0,100:0d1117&height=80&section=header&text=PC+Auto&fontSize=20&fontColor=f0f0f0&fontAlignY=50&stroke=b0b0b0" width="100%" />
-</a>
-<br/>
-<b>PC automation and scripting toolkit</b>
-<br/><br/>
-<img src="https://img.shields.io/badge/Python-Automation-Scripting-b0b0b0?style=flat-square&labelColor=0d1117" />
-<br/><br/>
-<a href="https://github.com/kamalesh4044/PC-Auto"><img src="https://img.shields.io/badge/SRC-555?style=flat-square&labelColor=0d1112" /></a>
-</td>
-<td align="center" width="50%">
-<a href="https://github.com/kamalesh4044/FINGER">
-<img src="https://capsule-render.vercel.app/api?type=venom&color=0:0d1117,50:b0b0b0,100:0d1117&height=80&section=header&text=FINGER&fontSize=20&fontColor=f0f0f0&fontAlignY=50&stroke=b0b0b0" width="100%" />
-</a>
-<br/>
-<b>Touch gesture recognition system</b>
-<br/><br/>
-<img src="https://img.shields.io/badge/JS-Touch-Gesture-Recognition-b0b0b0?style=flat-square&labelColor=0d1117" />
-<br/><br/>
-<a href="https://github.com/kamalesh4044/FINGER"><img src="https://img.shields.io/badge/SRC-555?style=flat-square&labelColor=0d1112" /></a>
-</td>
-</tr>
-<tr>
-<td align="center" width="50%">
-<a href="https://github.com/kamalesh4044/Dinosour">
-<img src="https://capsule-render.vercel.app/api?type=venom&color=0:0d1117,50:b0b0b0,100:0d1117&height=80&section=header&text=Dinosour&fontSize=20&fontColor=f0f0f0&fontAlignY=50&stroke=b0b0b0" width="100%" />
-</a>
-<br/>
-<b>Browser-based dinosaur game</b>
-<br/><br/>
-<img src="https://img.shields.io/badge/TS-Canvas-Game-b0b0b0?style=flat-square&labelColor=0d1117" />
-<br/><br/>
-<a href="https://github.com/kamalesh4044/Dinosour"><img src="https://img.shields.io/badge/SRC-555?style=flat-square&labelColor=0d1112" /></a>
-</td>
-<td align="center" width="50%">
-<a href="https://github.com/kamalesh4044/EvoDot-Web">
-<img src="https://capsule-render.vercel.app/api?type=venom&color=0:0d1117,50:b0b0b0,100:0d1117&height=80&section=header&text=EvoDot+Web&fontSize=20&fontColor=f0f0f0&fontAlignY=50&stroke=b0b0b0" width="100%" />
-</a>
-<br/>
-<b>Browser client for EvoDot multiplayer</b>
-<br/><br/>
-<img src="https://img.shields.io/badge/JS-WebSocket-WebGL-b0b0b0?style=flat-square&labelColor=0d1117" />
-<br/><br/>
-<a href="https://github.com/kamalesh4044/EvoDot-Web"><img src="https://img.shields.io/badge/SRC-555?style=flat-square&labelColor=0d1112" /></a>
-</td>
-</tr>
-</table>
+</details>
 
 <br/>
 
@@ -459,22 +318,6 @@ I don't just write code — I architect **performant, elegant products** that sh
 <br/>
 
 <img src="https://github-readme-activity-graph.vercel.app/graph?username=kamalesh4044&bg_color=0d1117&color=7c3aed&line=06d6a0&point=ffffff&area=true&hide_border=true" width="100%" />
-
-</div>
-
----
-
-<div align="center">
-
-<img src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=800&size=30&duration=2000&pause=1000&color=ff6b6b&center=true&vCenter=true&width=500&lines=SNAKE+ANIMATION" alt="Snake" />
-
-<br/>
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/kamalesh4044/kamalesh4044/output/github-snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/kamalesh4044/kamalesh4044/output/github-snake.svg" />
-  <img alt="github-snake" src="https://raw.githubusercontent.com/kamalesh4044/kamalesh4044/output/github-snake-dark.svg" width="100%" />
-</picture>
 
 </div>
 
