@@ -1,128 +1,89 @@
 <div align="center">
 
-# Kamalesh
+<!-- Epic Cyberpunk / Hacker GIF Banner (Reduced Size) -->
+<img src="https://cdna.artstation.com/p/assets/images/images/028/102/058/original/pixel-jeff-matrix-s.gif?1593487263" width="70%" />
 
-### Privacy-minded builder · JavaScript developer · Security curious
+<!-- Unique Gamer Name Plate (Using Orbitron Sci-Fi Font) -->
+<h1>
+  <img src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=800&size=45&duration=2500&pause=1000&color=FF4500&center=true&vCenter=true&width=800&lines=KAMALESH;GAME+DEVELOPER;FPV" />
+</h1>
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=2800&pause=900&color=22C55E&center=true&vCenter=true&width=720&lines=Building+useful+web+experiences;Exploring+privacy+and+browser+security;Learning+by+shipping+real+projects" alt="Animated introduction" />
-
+<!-- Player Stats (Views, Level, Status) -->
 <p>
-  <a href="https://github.com/kamalesh4044"><img src="https://img.shields.io/github/followers/kamalesh4044?label=Followers&style=for-the-badge&color=111827" alt="GitHub followers" /></a>
-  <a href="https://github.com/kamalesh4044?tab=repositories"><img src="https://img.shields.io/badge/Projects-Explore-22c55e?style=for-the-badge" alt="Explore projects" /></a>
-  <a href="https://github.com/kamalesh4044/FINGER"><img src="https://img.shields.io/github/stars/kamalesh4044/FINGER?style=for-the-badge&color=f59e0b" alt="Privacy Lens stars" /></a>
+  <img src="https://komarev.com/ghpvc/?username=kamalesh4044&label=PROFILE+HITS&color=FF4500&style=for-the-badge" />
+  <img src="https://img.shields.io/github/followers/kamalesh4044?label=SQUAD&style=for-the-badge&color=8B0000" />
+  <img src="https://img.shields.io/badge/STATUS-ONLINE_AND_CODING-FFD700?style=for-the-badge" />
 </p>
 
-<img src="https://komarev.com/ghpvc/?username=kamalesh4044&style=flat-square&color=22c55e" alt="Profile views" />
-
-</div>
-
-## About me
-
-I build practical web products with a strong interest in privacy, security, browser APIs, and clean user experiences. My approach is simple: understand the problem, make the experience clear, and ship something people can actually use.
-
-- Building privacy-conscious tools and learning by shipping
-- Exploring browser capabilities, security, and developer tooling
-- Growing from frontend work into full-stack development
-- Open to useful open-source collaboration
-
-## Featured project
-
-<table>
-<tr>
-<td width="70%">
-
-### [Privacy Lens](https://github.com/kamalesh4044/FINGER)
-
-A local-first, consent-based browser diagnostics dashboard. It helps users understand browser signals and device capabilities without hiding what is being collected.
-
-**Highlights:** explicit consent, user-triggered device tests, visible media previews, transparent safety boundaries, and local JSON export.
-
-</td>
-<td width="30%" align="center">
-
-<img src="https://img.shields.io/badge/Privacy--first-22c55e?style=for-the-badge&logo=shield&logoColor=white" alt="Privacy first" />
-<br /><br />
-<img src="https://img.shields.io/badge/Local--first-0f172a?style=for-the-badge&logo=opensourceinitiative&logoColor=white" alt="Local first" />
-
-</td>
-</tr>
-</table>
-
-## Technology toolbox
-
-### Languages
-
+<!-- Weapon of Choice (Massive Skills List) -->
+<h2>⚔️ WEAPONS OF CHOICE</h2>
 <p>
-  <img src="https://skillicons.dev/icons?i=js,html,css" alt="JavaScript HTML CSS" />
+  <img src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=700&size=20&duration=3000&pause=500&color=FFD700&vCenter=true&lines=>+PROGRAMMING_LANGUAGES" alt="Programming Languages" /><br>
+  <img src="https://skillicons.dev/icons?i=c,cpp,cs,java,python,js,ts,html,css,php,ruby,go,rust" height="45"/>
+  <br><br>
+  
+  <img src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=700&size=20&duration=3000&pause=500&color=FFD700&vCenter=true&lines=>+FRAMEWORKS_%26_DATABASES" alt="Frameworks & Databases" /><br>
+  <img src="https://skillicons.dev/icons?i=nodejs,express,react,nextjs,vue,angular,mysql,mongodb,postgres,firebase" height="45"/>
+  <br><br>
+  
+  <img src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=700&size=20&duration=3000&pause=500&color=FFD700&vCenter=true&lines=>+TOOLS,_OS_%26_GAME_ENGINES" alt="Tools & Game Engines" /><br>
+  <img src="https://skillicons.dev/icons?i=git,github,docker,aws,linux,ubuntu,windows,bash,powershell,vscode,visualstudio,figma,unity,unreal,blender" height="45"/>
 </p>
 
-### Runtime, data, and tools
+<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/fire.png" width="100%" />
 
+<h2>🎮 LIVE SERVERS (Play Now!)</h2>
 <p>
-  <img src="https://skillicons.dev/icons?i=nodejs,postgres,git,github,vscode,postman" alt="Node.js PostgreSQL Git GitHub VS Code Postman" />
+  <a herf="https://velocity-io.onrender.com">
+    <img src="https://img.shields.io/badge/Velocity_FPS-FF4500?style=for-the-badge&logo=vercel&logoColor=white"/>
+  </a>
+  <a href="https://multiplayer-fps-game.onrender.com">
+    <img src="https://img.shields.io/badge/PLAY_NOW-SkillWarz_FPS-FF4500?style=for-the-badge&logo=googlechrome&logoColor=white"/>
+  </a>
+  &nbsp;&nbsp;
+  <a href="https://void-runner-seven.vercel.app">
+    <img src="https://img.shields.io/badge/PLAY_NOW-Void_Runner-FF4500?style=for-the-badge&logo=vercel&logoColor=white"/>
+  </a>
 </p>
 
-### What I use them for
+<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/fire.png" width="100%" />
 
-| Area | Tools and technologies |
-| --- | --- |
-| Frontend | HTML, CSS, JavaScript, responsive UI, browser APIs |
-| Backend | Node.js, REST endpoints, PostgreSQL |
-| Developer tools | Git, GitHub, VS Code, Postman, npm |
-| Product focus | Privacy, consent, accessibility, observability |
+<h2>🏆 PLAYER PROGRESSION</h2>
 
-## GitHub activity
+  <!-- GitHub Stats Fixed (Removed private commit tracking to fix broken image) -->
+  <img src="https://github-readme-stats.vercel.app/api?username=kamalesh4044&show_icons=true&bg_color=0D1117&title_color=FF4500&text_color=B3B3B3&icon_color=FFD700&border_color=FF4500&hide_border=false" height="190"/>
+  
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=kamalesh4044&layout=compact&bg_color=0D1117&title_color=FF4500&text_color=B3B3B3&border_color=FF4500&hide_border=false" height="190"/>
 
-<div align="center">
+<h2>🐍 SNAKE CONTRIBUTION BOX</h2>
+<p>
+  <!-- Auto-generated by GitHub Actions (Will appear once action runs) -->
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./dist/github-snake.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="./dist/github-snake.svg" />
+    <img alt="github-snake" src="./dist/github-snake.svg" width="100%" />
+  </picture>
+</p>
 
-<img height="170" src="https://github-readme-stats.vercel.app/api?username=kamalesh4044&show_icons=true&hide_border=true&theme=transparent&title_color=22c55e&icon_color=22c55e&text_color=64748b" alt="Kamalesh's GitHub statistics" />
-<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=kamalesh4044&layout=compact&hide_border=true&theme=transparent&title_color=22c55e&text_color=64748b" alt="Most used languages" />
+<h2>🔥 COMBAT RECORD (Contributions)</h2>
+<p>
+  <!-- Activity Graph in Dark Theme -->
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=kamalesh4044&bg_color=0D1117&color=FF4500&line=FFD700&point=FFFFFF&area=true&hide_border=true" width="100%"/>
+</p>
 
-<br />
+<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/fire.png" width="100%" />
 
-<img src="https://streak-stats.demolab.com?user=kamalesh4044&hide_border=true&theme=transparent&ring=22c55e&fire=f59e0b&currStreakLabel=22c55e" alt="GitHub contribution streak" />
-
-<br />
-
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=kamalesh4044&bg_color=ffffff00&color=64748b&line=22c55e&point=f59e0b&area=true&hide_border=true" alt="GitHub activity graph" />
-
-</div>
-
-<div align="center">
-
-<img src="https://github-profile-trophy.vercel.app/?username=kamalesh4044&theme=flat&no-frame=true&no-bg=true&margin-w=8" alt="GitHub profile trophies" />
-
-</div>
-
-## Contribution journey
-
-This profile includes a GitHub Actions workflow that generates a contribution Snake animation. Once the profile repository is created and the workflow runs, it will appear below automatically.
-
-<div align="center">
-
-<img src="https://raw.githubusercontent.com/kamalesh4044/kamalesh4044/output/github-contribution-grid-snake.svg" alt="GitHub contribution Snake" />
+<p>
+  <img src="https://capsule-render.vercel.app/api?type=rect&color=0:8B0000,100:FF4500&height=100&section=footer&text=INITIALIZING_NEXT_MATCH...&fontSize=24&fontColor=ffffff&fontAlignY=50" width="100%"/>
+</p>
 
 </div>
 
-## Current focus
 
-```text
-Privacy-first web tools    ███████████████████░  90%
-JavaScript + browser APIs  █████████████████░░░  80%
-Backend development        ██████████████░░░░░░  65%
-Open-source collaboration  ███████████░░░░░░░░░  55%
-```
-
-## Let's connect
-
+---
+<br>
 <div align="center">
-
-<a href="https://github.com/kamalesh4044"><img src="https://img.shields.io/badge/GitHub-kamalesh4044-111827?style=for-the-badge&logo=github" alt="GitHub" /></a>
-<a href="https://www.linkedin.com/in/your-linkedin-username/"><img src="https://img.shields.io/badge/LinkedIn-Connect-0a66c2?style=for-the-badge&logo=linkedin" alt="LinkedIn" /></a>
-<a href="mailto:your-email@example.com"><img src="https://img.shields.io/badge/Email-Say_hello-ea4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
-
-<br /><br />
-
-<i>Good software should be useful, understandable, and respectful of the people who use it.</i>
-
+  <a href="https://github.com/kamalesh4044/kamalesh4044">
+    <img src="https://komarev.com/ghpvc/?username=kamalesh4044-kamalesh4044&label=PROJECT+VIEWS&color=00ff88&style=for-the-badge" alt="Views"/>
+  </a>
 </div>
