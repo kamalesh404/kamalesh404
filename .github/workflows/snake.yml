@@ -1,30 +1,24 @@
-name: Generate Snake Contribution
+name: Generate Snake Animation
 
 on:
   schedule:
-    - cron: "0 0 * * *"
+    - cron: "0 */6 * * *"
   workflow_dispatch:
 
-permissions:
-  contents: write
-
 jobs:
-  build:
+  generate:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      
-      - uses: Platane/snk@v3
-        id: snake-gif
+      - uses: Platane/snk/svg-only@v3
         with:
-          github_user_name: ${{ github.repository_owner }}
+          github_user_name: kamalesh4044
           outputs: |
-            dist/github-snake.svg?color_snake=#FF4500&color_dots=#0D1117,#440000,#8B0000,#FF4500,#FFD700
-            
-      - name: Commit & Push
-        run: |
-          git config user.name github-actions
-          git config user.email github-actions@github.com
-          git add dist
-          git commit -m "Generate Snake Animation" || echo "no changes"
-          git push
+            dist/github-snake-dark.svg?color_snake=0ea5e9&color_dots=0f172a,#1e3a5f,#0ea5e9,#06d6a0,#ffd166
+            dist/github-snake.svg?color_snake=3b82f6&color_dots=ffffff,#e2e8f0,#3b82f6,#06b6d4,#8b5cf6
+
+      - uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
