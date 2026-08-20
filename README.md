@@ -87,7 +87,7 @@
 <h2>🔥 COMBAT RECORD (Contributions)</h2>
 <p>
   <!-- Activity Graph in Dark Theme -->
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=kamalesh404&bg_color=0D1117&color=FF4500&line=FFD700&point=FFFFFF&area=true&hide_border=true" width="100%"/>
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=kamalesh4044&bg_color=0D1117&color=FF4500&line=FFD700&point=FFFFFF&area=true&hide_border=true" width="100%"/>
 </p>
 
 <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/fire.png" width="100%" />
