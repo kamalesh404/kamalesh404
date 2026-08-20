@@ -10,7 +10,7 @@
 
 <!-- Player Stats (Views, Level, Status) -->
 <p>
-  <img src="https://komarev.com/ghpvc/?username=kamalesh404&label=PROFILE+HITS&color=FF4500&style=for-the-badge" />
+  <img src="https://komarev.com/ghpvc/?username=kamalesh4044&label=PROFILE+HITS&color=FF4500&style=for-the-badge" />
   <img src="https://img.shields.io/github/followers/kamalesh404?label=SQUAD&style=for-the-badge&color=8B0000" />
   <img src="https://img.shields.io/badge/STATUS-ONLINE_AND_CODING-FFD700?style=for-the-badge" />
 </p>
