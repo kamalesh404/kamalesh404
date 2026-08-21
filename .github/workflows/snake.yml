@@ -16,9 +16,11 @@ jobs:
         with:
           github_user_name: kamalesh404
           outputs: |
-            dist/github-snake.svg
+            dist/github-snake.svg?palette=red
             dist/github-snake-dark.svg?palette=github-dark
             dist/github-snake-light.svg?palette=github-light
+            dist/github-snake-orange.svg?palette=orange
+            dist/github-snake-purple.svg?palette=purple
 
       - uses: crazy-max/ghaction-github-pages@v3
         with:
