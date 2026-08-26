@@ -1,7 +1,5 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=wave&color=0:0D1117,25:8B0000,50:FF4500,75:8B0000,100:0D1117&height=150&section=header&text=&animation=fadeIn" width="100%" />
-
 <!-- Epic Cyberpunk / Hacker GIF Banner (Reduced Size) -->
 <img src="https://cdna.artstation.com/p/assets/images/images/028/102/058/original/pixel-jeff-matrix-s.gif?1593487263" width="70%" />
 
@@ -45,7 +43,7 @@
   <img src="https://skillicons.dev/icons?i=git,github,docker,aws,linux,ubuntu,windows,bash,powershell,vscode,visualstudio,figma,unity,unreal,blender" height="45"/>
 </p>
 
-<img src="https://capsule-render.vercel.app/api?type=wave&color=0:0D1117,50:FF4500,100:0D1117&height=60&animation=fadeIn" width="100%" />
+<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/fire.png" width="100%" />
 
 <h2>🎮 LIVE SERVERS (Play Now!)</h2>
 <p>
@@ -61,7 +59,7 @@
   </a>
 </p>
 
-<img src="https://capsule-render.vercel.app/api?type=wave&color=0:0D1117,50:FF4500,100:0D1117&height=60&animation=fadeIn" width="100%" />
+<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/fire.png" width="100%" />
 
 <h2>🏆 PLAYER PROGRESSION</h2>
 
@@ -92,10 +90,10 @@
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=kamalesh4044&bg_color=0D1117&color=FF4500&line=FFD700&point=FFFFFF&area=true&hide_border=true" width="100%"/>
 </p>
 
-<img src="https://capsule-render.vercel.app/api?type=wave&color=0:0D1117,50:FF4500,100:0D1117&height=60&animation=fadeIn" width="100%" />
+<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/fire.png" width="100%" />
 
 <p>
-  <img src="https://capsule-render.vercel.app/api?type=wave&color=0:8B0000,50:FF4500,100:8B0000&height=120&section=footer&text=INITIALIZING_NEXT_MATCH...&fontSize=24&fontColor=ffffff&fontAlignY=50&animation=fadeIn" width="100%"/>
+  <img src="https://capsule-render.vercel.app/api?type=rect&color=0:8B0000,100:FF4500&height=100&section=footer&text=INITIALIZING_NEXT_MATCH...&fontSize=24&fontColor=ffffff&fontAlignY=50" width="100%"/>
 </p>
 
 </div>
