@@ -155,17 +155,17 @@
 
 ## 🏆 PLAYER PROGRESSION
 
-<img src="https://github-readme-stats.vercel.app/api?username=kamalesh4044&show_icons=true&bg_color=0D1117&title_color=FF4500&text_color=B3B3B3&icon_color=FFD700&border_color=FF4500&hide_border=false" height="190"/>
+<img src="https://github-readme-stats.vercel.app/api?username=kamalesh404&show_icons=true&bg_color=0D1117&title_color=FF4500&text_color=B3B3B3&icon_color=FFD700&border_color=FF4500&hide_border=false" height="190"/>
 
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=kamalesh4044&layout=compact&bg_color=0D1117&title_color=FF4500&text_color=B3B3B3&border_color=FF4500&hide_border=false" height="190"/>
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=kamalesh404&layout=compact&bg_color=0D1117&title_color=FF4500&text_color=B3B3B3&border_color=FF4500&hide_border=false" height="190"/>
 
 <br>
 
-<img src="https://streak-stats.demolab.com?user=kamalesh4044&bg_color=0D1117&border_color=FF4500&stroke=FF4500&ring=FFD700&fire=FF4500&currStreakNum=B3B3B3&sideNums=B3B3B3&currStreakLabel=FFD700&sideLabels=B3B3B3&dates=666666&hide_border=false" height="190"/>
+<img src="https://streak-stats.demolab.com?user=kamalesh404&bg_color=0D1117&border_color=FF4500&stroke=FF4500&ring=FFD700&fire=FF4500&currStreakNum=B3B3B3&sideNums=B3B3B3&currStreakLabel=FFD700&sideLabels=B3B3B3&dates=666666&hide_border=false" height="190"/>
 
 <p align="center">
   <a href="https://github.com/ryo-ma/github-profile-trophy">
-    <img src="https://github-profile-trophy.vercel.app/?username=kamalesh4044&theme=onedark&column=7&margin-w=15&margin-h=15&no-frame=true&no-bg=true" alt="Kamalesh's Trophies" />
+    <img src="https://github-profile-trophy.vercel.app/?username=kamalesh404&theme=onedark&column=7&margin-w=15&margin-h=15&no-frame=true&no-bg=true" alt="Kamalesh's Trophies" />
   </a>
 </p>
 
@@ -173,16 +173,16 @@
 
 <p>
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/kamalesh4044/kamalesh4044/output/github-snake-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/kamalesh4044/kamalesh4044/output/github-snake.svg" />
-    <img alt="github-snake" src="https://raw.githubusercontent.com/kamalesh4044/kamalesh4044/output/github-snake.svg" width="100%" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/kamalesh404/kamalesh404/output/github-snake-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/kamalesh404/kamalesh404/output/github-snake.svg" />
+    <img alt="github-snake" src="https://raw.githubusercontent.com/kamalesh404/kamalesh404/output/github-snake.svg" width="100%" />
   </picture>
 </p>
 
-## 🔥 COMBAT RECORD (Contributions)
+## 📊 CONTRIBUTION GRAPH
 
 <p>
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=kamalesh4044&bg_color=0D1117&color=FF4500&line=FFD700&point=FFFFFF&area=true&hide_border=true" width="100%"/>
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=kamalesh404&bg_color=0D1117&color=FF4500&line=FFD700&point=FFFFFF&area=true&hide_border=true&custom_title=Contribution+Activity" width="100%"/>
 </p>
 
 <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/fire.png" width="100%" />
