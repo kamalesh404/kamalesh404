@@ -10,7 +10,7 @@
 
 <!-- Player stats -->
 <p>
-  <img src="https://komarev.com/ghpvc/?username=kamalesh404&label=PROFILE+HITS&color=FF4500&style=for-the-badge" />
+  <img src="https://komarev.com/ghpvc/?username=kamalesh4044&label=PROFILE+HITS&color=FF4500&style=for-the-badge" />
   <img src="https://img.shields.io/github/followers/kamalesh404?label=SQUAD&style=for-the-badge&color=8B0000" />
   <img src="https://img.shields.io/github/stars/kamalesh404?label=TOTAL+STARS&style=for-the-badge&color=FFD700" />
 </p>
@@ -113,17 +113,19 @@
 
 <div align="center">
 
-## ⚔️ WEAPONS OF CHOICE
-
+<!-- Weapon of Choice (Massive Skills List) -->
+<h2>⚔️ WEAPONS OF CHOICE</h2>
 <p>
-  <img src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=700&size=20&duration=3000&pause=500&color=FFD700&vCenter=true&lines=>+LANGUAGES" /><br>
-  <img src="https://skillicons.dev/icons?i=js,ts,python,java,html,css,cpp,cs" height="45"/>
+  <img src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=700&size=20&duration=3000&pause=500&color=FFD700&vCenter=true&lines=>+PROGRAMMING_LANGUAGES" alt="Programming Languages" /><br>
+  <img src="https://skillicons.dev/icons?i=c,cpp,cs,java,python,js,ts,html,css,php,ruby,go,rust" height="45"/>
   <br><br>
-  <img src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=700&size=20&duration=3000&pause=500&color=FFD700&vCenter=true&lines=>+FRAMEWORKS_%26_DATA" /><br>
-  <img src="https://skillicons.dev/icons?i=nodejs,express,react,fastapi,threejs,mongodb,mysql,firebase" height="45"/>
+
+  <img src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=700&size=20&duration=3000&pause=500&color=FFD700&vCenter=true&lines=>+FRAMEWORKS_%26_DATABASES" alt="Frameworks & Databases" /><br>
+  <img src="https://skillicons.dev/icons?i=nodejs,express,react,nextjs,vue,angular,mysql,mongodb,postgres,firebase" height="45"/>
   <br><br>
-  <img src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=700&size=20&duration=3000&pause=500&color=FFD700&vCenter=true&lines=>+TOOLS_%26_ENGINES" /><br>
-  <img src="https://skillicons.dev/icons?i=git,github,docker,linux,vscode,godot,blender,socketio" height="45"/>
+
+  <img src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=700&size=20&duration=3000&pause=500&color=FFD700&vCenter=true&lines=>+TOOLS,_OS_%26_GAME_ENGINES" alt="Tools & Game Engines" /><br>
+  <img src="https://skillicons.dev/icons?i=git,github,docker,aws,linux,ubuntu,windows,bash,powershell,vscode,visualstudio,figma,unity,unreal,blender" height="45"/>
 </p>
 
 <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/fire.png" width="100%" />
