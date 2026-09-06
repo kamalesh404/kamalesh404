@@ -182,7 +182,14 @@
 ## 📊 CONTRIBUTION GRAPH
 
 <p>
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=kamalesh404&bg_color=0D1117&color=FF4500&line=FFD700&point=FFFFFF&area=true&hide_border=true&custom_title=Contribution+Activity" width="100%"/>
+  <img src="https://ghchart.rshah.org/FF4500/kamalesh404" alt="Kamalesh's contribution graph" width="100%"/>
+</p>
+
+## ⚡ CODER PROFILE
+
+<p>
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=kamalesh404&theme=github_dark" height="190"/>
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=kamalesh404&theme=github_dark&utcOffset=5.5" height="190"/>
 </p>
 
 <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/fire.png" width="100%" />
