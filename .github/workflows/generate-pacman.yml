@@ -1,0 +1,147 @@
+name: Generate Pac-Man
+
+on:
+  schedule:
+    - cron: "0 */6 * * *"
+  workflow_dispatch:
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Generate Pac-Man SVG
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { data: contributions } = await github.rest.graphql({
+              query: `
+                query($username: String!) {
+                  user(login: $username) {
+                    contributionsCollection {
+                      contributionCalendar {
+                        weeks {
+                          contributionDays {
+                            contributionCount
+                            date
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              `,
+              variables: { username: context.repo.owner }
+            });
+
+            const weeks = contributions.user.contributionsCollection.contributionCalendar.weeks;
+            const allDays = weeks.flatMap(w => w.contributionDays);
+            
+            // Get last 52 weeks for the grid
+            const totalWeeks = Math.min(weeks.length, 52);
+            const recentWeeks = weeks.slice(-totalWeeks);
+            
+            function getColor(count) {
+              if (count === 0) return '#161b22';
+              if (count < 3) return '#0e4429';
+              if (count < 6) return '#26a641';
+              return '#39d353';
+            }
+
+            // Generate grid cells
+            let gridCells = '';
+            for (let row = 0; row < 7; row++) {
+              for (let col = 0; col < totalWeeks; col++) {
+                const week = recentWeeks[col];
+                const day = week.contributionDays[row];
+                const color = getColor(day.contributionCount);
+                const x = col * 13 + 30;
+                const y = row * 13 + 20;
+                gridCells += `<rect x="${x}" y="${y}" width="11" height="11" fill="${color}" rx="2"/>`;
+              }
+            }
+
+            const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${totalWeeks * 13 + 60} 130" width="${totalWeeks * 13 + 60}" height="130">
+  <defs>
+    <style>
+      @keyframes chomp {
+        0%, 100% { d: path("M 25 75 A 25 25 0 1 1 25 125 A 25 25 0 1 1 25 75"); }
+        50% { d: path("M 25 75 A 25 25 0 1 1 50 100 L 25 75"); }
+      }
+      @keyframes movePacman {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(${totalWeeks * 13}px); }
+      }
+      @keyframes dotPulse {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.5; }
+      }
+      @keyframes ghostBounce {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-4px); }
+      }
+      .pacman { animation: movePacman 10s linear infinite; }
+      .dot { animation: dotPulse 0.8s ease-in-out infinite; }
+      .ghost { animation: ghostBounce 0.4s ease-in-out infinite; }
+    </style>
+  </defs>
+  
+  <rect width="100%" height="100%" fill="#0d1117" rx="8"/>
+  
+  <text x="15" y="15" fill="#8b949e" font-family="monospace" font-size="10">CONTRIBUTIONS</text>
+  
+  <!-- Grid -->
+  <g>
+    ${gridCells}
+  </g>
+  
+  <!-- Dots on the path -->
+  <g>
+    ${Array.from({length: Math.floor(totalWeeks / 2)}, (_, i) => 
+      \`<circle class="dot" cx="\${30 + i * 26}" cy="75" r="3" fill="#ffd700" style="animation-delay: \${i * 0.1}s"/>\`
+    ).join('\n    ')}
+  </g>
+  
+  <!-- Pac-Man -->
+  <g class="pacman">
+    <circle cx="25" cy="100" r="25" fill="#ffd700"/>
+    <path d="M 25 100 L 50 85 L 50 115 Z" fill="#0d1117"/>
+  </g>
+  
+  <!-- Ghosts -->
+  <g class="ghost" style="animation-delay: 0.1s">
+    <circle cx="10" cy="100" r="18" fill="#ff69b4"/>
+    <circle cx="5" cy="95" r="3" fill="white"/>
+    <circle cx="15" cy="95" r="3" fill="white"/>
+  </g>
+  
+  <g class="ghost" style="animation-delay: 0.2s">
+    <circle cx="-15" cy="100" r="18" fill="#00ffff"/>
+    <circle cx="-20" cy="95" r="3" fill="white"/>
+    <circle cx="-10" cy="95" r="3" fill="white"/>
+  </g>
+</svg>`;
+
+            const fs = require('fs');
+            fs.mkdirSync('dist', { recursive: true });
+            fs.writeFileSync('dist/github-pacman.svg', svg);
+            fs.writeFileSync('dist/github-pacman-dark.svg', svg);
+            
+            console.log('Pac-Man SVG generated successfully!');
+
+      - name: Push to output branch
+        uses: crazy-max/ghaction-github-pages@v3
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
