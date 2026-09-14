@@ -153,22 +153,6 @@
 
 <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/fire.png" width="100%" />
 
-## 🏆 PLAYER PROGRESSION
-
-<img src="https://github-readme-stats.vercel.app/api?username=kamalesh404&show_icons=true&bg_color=0D1117&title_color=FF4500&text_color=B3B3B3&icon_color=FFD700&border_color=FF4500&hide_border=false" height="190"/>
-
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=kamalesh404&layout=compact&bg_color=0D1117&title_color=FF4500&text_color=B3B3B3&border_color=FF4500&hide_border=false" height="190"/>
-
-<br>
-
-<img src="https://streak-stats.demolab.com?user=kamalesh404&bg_color=0D1117&border_color=FF4500&stroke=FF4500&ring=FFD700&fire=FF4500&currStreakNum=B3B3B3&sideNums=B3B3B3&currStreakLabel=FFD700&sideLabels=B3B3B3&dates=666666&hide_border=false" height="190"/>
-
-<p align="center">
-  <a href="https://github.com/ryo-ma/github-profile-trophy">
-    <img src="https://github-profile-trophy.vercel.app/?username=kamalesh404&theme=onedark&column=7&margin-w=15&margin-h=15&no-frame=true&no-bg=true" alt="Kamalesh's Trophies" />
-  </a>
-</p>
-
 ## 🟡 PAC-MAN CONTRIBUTION BOX
 
 <p>
@@ -177,12 +161,6 @@
     <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/kamalesh404/kamalesh404/output/pacman-contribution-graph.svg" />
     <img alt="pacman contribution graph" src="https://raw.githubusercontent.com/kamalesh404/kamalesh404/output/pacman-contribution-graph.svg" width="100%" />
   </picture>
-</p>
-
-## 📊 CONTRIBUTION GRAPH
-
-<p>
-  <img src="https://ghchart.rshah.org/FF4500/kamalesh404" alt="Kamalesh's contribution graph" width="100%"/>
 </p>
 
 ## ⚡ CODER PROFILE
