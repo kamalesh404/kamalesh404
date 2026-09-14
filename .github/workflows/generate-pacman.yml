@@ -43,38 +43,29 @@ jobs:
             let content = fs.readFileSync(filePath, 'utf8');
             
             // Step 1: Replace the Pac-Man path element with avatar image
-            // Pac-Man is: <path d="M 10,10 L ... A ... Z" fill="yellow">
-            // We replace the opening tag to become an image element
+            // The path spans multiple lines: <path d="M 10,10\n L ...\n A ...\n Z" fill="yellow">
+            // We use a regex that matches across lines
             content = content.replace(
-              /<path\s+d="M 10,10[^"]*"\s+fill="yellow">/,
+              /<path\s+d="M 10,10[\s\S]*?Z"\s+fill="yellow">/g,
               `<image x="0" y="0" width="20" height="20" href="${AVATAR_URL}">`
             );
             
-            // Step 2: Remove the fill color animation (yellow/red/gray cycling)
-            // This animation changes the fill color which doesn't apply to images
+            // Step 2: Remove the fill color animation (yellow/red cycling)
+            // This animation is a child of the path/image element
             content = content.replace(
-              /<animate\s+attributeName="fill"\s+dur="117800ms"\s+repeatCount="indefinite"\s+calcMode="discrete"\s*\n\s*values="yellow;[^"]*"\s*\/>/g,
+              /<animate\s+attributeName="fill"\s+dur="[^"]*"\s+repeatCount="indefinite"\s*\n?\s*keyTimes="[^"]*"\s*\n?\s*values="yellow;[^"]*"\s*\/>/g,
               ''
             );
             
-            // Also handle single-line fill animation variant
+            // Also handle single-line fill animation
             content = content.replace(
-              /<animate attributeName="fill" dur="117800ms" repeatCount="indefinite" calcMode="discrete"\s+values="yellow;[^"]*"\/>/g,
+              /<animate attributeName="fill" dur="[^"]*" repeatCount="indefinite"\s+keyTimes="[^"]*"\s+values="yellow;[^"]*"\/>/g,
               ''
             );
             
-            // Step 3: Remove the mouth animation (path "d" morphing)
-            // This animates the mouth open/close which doesn't apply to images
-            content = content.replace(
-              /<animate\s+attributeName="d"\s+dur="0\.5s"\s+repeatCount="indefinite"\s*\n?\s*values="[^"]*"\s*\/>/g,
-              ''
-            );
-            
-            // Also handle single-line d animation variant
-            content = content.replace(
-              /<animate attributeName="d" dur="0\.5s" repeatCount="indefinite"\s+values="[^"]*"\/>/g,
-              ''
-            );
+            // Step 3: Close the image element properly
+            // The original path had </path> but we need </image>
+            content = content.replace(/<\/path>/g, '</image>');
             
             fs.writeFileSync(filePath, content);
             console.log(`Processed: ${file}`);
