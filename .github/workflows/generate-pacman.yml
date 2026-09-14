@@ -43,23 +43,22 @@ jobs:
             let content = fs.readFileSync(filePath, 'utf8');
             
             // Step 1: Replace the Pac-Man path element with avatar image
-            // The path spans multiple lines: <path d="M 10,10\n L ...\n A ...\n Z" fill="yellow">
-            // We use a regex that matches across lines
+            // The path has id="pacman" and spans multiple lines
             content = content.replace(
-              /<path\s+d="M 10,10[\s\S]*?Z"\s+fill="yellow">/g,
-              `<image x="0" y="0" width="20" height="20" href="${AVATAR_URL}">`
+              /<path\s+id="pacman"\s+d="M 10,10[\s\S]*?Z"\s+fill="yellow">/g,
+              '<image x="0" y="0" width="20" height="20" href="' + AVATAR_URL + '">'
             );
             
             // Step 2: Remove the fill color animation (yellow/red cycling)
             // This animation is a child of the path/image element
             content = content.replace(
-              /<animate\s+attributeName="fill"\s+dur="[^"]*"\s+repeatCount="indefinite"\s*\n?\s*keyTimes="[^"]*"\s*\n?\s*values="yellow;[^"]*"\s*\/>/g,
+              /<animate\s+attributeName="fill"\s+dur="[^"]*"\s+repeatCount="indefinite"\s*\n?\s*calcMode="discrete"\s*\n?\s*keyTimes="[^"]*"\s*\n?\s*values="yellow;[^"]*"\s*\/>/g,
               ''
             );
             
             // Also handle single-line fill animation
             content = content.replace(
-              /<animate attributeName="fill" dur="[^"]*" repeatCount="indefinite"\s+keyTimes="[^"]*"\s+values="yellow;[^"]*"\/>/g,
+              /<animate attributeName="fill" dur="[^"]*" repeatCount="indefinite"\s+calcMode="discrete"\s+keyTimes="[^"]*"\s+values="yellow;[^"]*"\/>/g,
               ''
             );
             
