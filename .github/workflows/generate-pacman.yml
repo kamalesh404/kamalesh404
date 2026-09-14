@@ -29,7 +29,7 @@ jobs:
 
       - name: Replace Pac-Man with avatar
         run: |
-          cat > replace-pacman.js << 'EOF'
+          cat > replace-pacman.js << 'ENDSCRIPT'
           const fs = require('fs');
           const path = require('path');
           
@@ -42,31 +42,44 @@ jobs:
             const filePath = path.join(distDir, file);
             let content = fs.readFileSync(filePath, 'utf8');
             
-            // Replace yellow Pac-Man circle with avatar image
-            // The Pac-Man is a circle with fill="#FFE000" or similar yellow
+            // Step 1: Replace the Pac-Man path element with avatar image
+            // Pac-Man is: <path d="M 10,10 L ... A ... Z" fill="yellow">
+            // We replace the opening tag to become an image element
             content = content.replace(
-              /<circle[^>]*fill="#FFE000"[^>]*\/>/g,
-              `<image x="-14" y="-14" width="28" height="28" href="${AVATAR_URL}" clip-path="url(#avatar-clip)"/>`
+              /<path\s+d="M 10,10[^"]*"\s+fill="yellow">/,
+              `<image x="0" y="0" width="20" height="20" href="${AVATAR_URL}">`
             );
             
-            // Also try other yellow shades
+            // Step 2: Remove the fill color animation (yellow/red/gray cycling)
+            // This animation changes the fill color which doesn't apply to images
             content = content.replace(
-              /<circle[^>]*fill="#ffd700"[^>]*\/>/g,
-              `<image x="-14" y="-14" width="28" height="28" href="${AVATAR_URL}" clip-path="url(#avatar-clip)"/>`
+              /<animate\s+attributeName="fill"\s+dur="117800ms"\s+repeatCount="indefinite"\s+calcMode="discrete"\s*\n\s*values="yellow;[^"]*"\s*\/>/g,
+              ''
             );
             
-            // Add clipPath definition if not present
-            if (!content.includes('id="avatar-clip"')) {
-              content = content.replace(
-                '<defs>',
-                '<defs><clipPath id="avatar-clip"><circle cx="0" cy="0" r="14"/></clipPath>'
-              );
-            }
+            // Also handle single-line fill animation variant
+            content = content.replace(
+              /<animate attributeName="fill" dur="117800ms" repeatCount="indefinite" calcMode="discrete"\s+values="yellow;[^"]*"\/>/g,
+              ''
+            );
+            
+            // Step 3: Remove the mouth animation (path "d" morphing)
+            // This animates the mouth open/close which doesn't apply to images
+            content = content.replace(
+              /<animate\s+attributeName="d"\s+dur="0\.5s"\s+repeatCount="indefinite"\s*\n?\s*values="[^"]*"\s*\/>/g,
+              ''
+            );
+            
+            // Also handle single-line d animation variant
+            content = content.replace(
+              /<animate attributeName="d" dur="0\.5s" repeatCount="indefinite"\s+values="[^"]*"\/>/g,
+              ''
+            );
             
             fs.writeFileSync(filePath, content);
             console.log(`Processed: ${file}`);
           });
-          EOF
+          ENDSCRIPT
           
           node replace-pacman.js
 
