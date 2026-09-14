@@ -169,13 +169,13 @@
   </a>
 </p>
 
-## 🐍 SNAKE CONTRIBUTION BOX
+## 🟡 PAC-MAN CONTRIBUTION BOX
 
 <p>
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/kamalesh404/kamalesh404/output/github-snake-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/kamalesh404/kamalesh404/output/github-snake.svg" />
-    <img alt="github-snake" src="https://raw.githubusercontent.com/kamalesh404/kamalesh404/output/github-snake.svg" width="100%" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/kamalesh404/kamalesh404/output/github-pacman-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/kamalesh404/kamalesh404/output/github-pacman.svg" />
+    <img alt="github-pacman" src="https://raw.githubusercontent.com/kamalesh404/kamalesh404/output/github-pacman.svg" width="100%" />
   </picture>
 </p>
 
