@@ -22,6 +22,22 @@ jobs:
           github_user_name: ${{ github.repository_owner }}
           games: 'pacman'
 
+      - name: Replace Pac-Man with avatar
+        run: |
+          for file in dist/*.svg; do
+            if [ -f "$file" ]; then
+              # Replace yellow Pac-Man circle with avatar image
+              sed -i 's|<circle cx="\([^"]*\)" cy="\([^"]*\)" r="\([^"]*\)" fill="#FFE000"/>|<image x="\1-\3" y="\2-\3" width="\3" height="\3" href="https://avatars.githubusercontent.com/u/228681348?v=4" clip-path="circle(\3 at \1 \2)"/>|g' "$file"
+              
+              # Add clip-path definition if not present
+              if ! grep -q "clipPath" "$file"; then
+                sed -i 's|<defs>|<defs><clipPath id="avatar-clip"><circle cx="0" cy="0" r="14"/></clipPath>|' "$file"
+              fi
+              
+              echo "Processed $file"
+            fi
+          done
+
       - name: push SVGs to the output branch
         uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
