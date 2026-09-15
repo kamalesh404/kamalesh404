@@ -49,7 +49,6 @@ jobs:
           const facePath = path.join(__dirname, 'assets', 'pacman-face.png');
           const faceBase64 = fs.readFileSync(facePath).toString('base64');
           const FACE_DATA_URI = `data:image/png;base64,${faceBase64}`;
-          const customFace = `<image id="pacman" x="0" y="0" width="20" height="20" preserveAspectRatio="xMidYMid meet" href="${FACE_DATA_URI}" />`;
 
           const files = fs.readdirSync(distDir).filter(f => f.endsWith('.svg'));
           let replaced = 0;
@@ -58,21 +57,26 @@ jobs:
             const filePath = path.join(distDir, file);
             let content = fs.readFileSync(filePath, 'utf8');
 
-            // Replace the complete Pac-Man path, including its original animation.
-            // The contribution dots and their positions remain untouched.
-            const pacmanBlock = /<path\s+id="pacman"[\s\S]*?<\/path>/g;
+            // Keep Pac-Man's original translate + rotate animations, but replace
+            // only its visual path with the user's face image. This makes the
+            // face travel over the same contribution cells as the original Pac-Man.
+            const pacmanBlock = /<path\s+id="pacman"[^>]*>([\\s\\S]*?)<\\/path>/g;
             const before = content;
-            content = content.replace(pacmanBlock, customFace);
 
-            // Fallback for a self-closing Pac-Man path.
+            content = content.replace(pacmanBlock, (match, inner) => {
+              const transforms = inner.match(/<animateTransform\\b[^>]*\\/>/g) || [];
+              return `<g id="pacman">\n  <image x="0" y="0" width="20" height="20" preserveAspectRatio="xMidYMid meet" href="${FACE_DATA_URI}" />\n  ${transforms.join('\n  ')}\n</g>`;
+            });
+
+            // Fallback if the upstream renderer ever emits a self-closing path.
             content = content.replace(
               /<path\s+id="pacman"[^>]*\/>/g,
-              customFace
+              `<image id="pacman" x="0" y="0" width="20" height="20" preserveAspectRatio="xMidYMid meet" href="${FACE_DATA_URI}" />`
             );
 
             if (content !== before) {
               replaced++;
-              console.log(`Custom face installed in ${file}`);
+              console.log(`Custom animated face installed in ${file}`);
             } else {
               console.warn(`Pac-Man path not found in ${file}`);
             }
