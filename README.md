@@ -157,9 +157,9 @@
 
 <p>
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/kamalesh404/kamalesh404@output/pacman-contribution-graph-dark.svg?v=101ee40" />
-    <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/kamalesh404/kamalesh404@output/pacman-contribution-graph.svg?v=101ee40" />
-    <img alt="pacman contribution graph" src="https://cdn.jsdelivr.net/gh/kamalesh404/kamalesh404@output/pacman-contribution-graph.svg?v=101ee40" width="100%" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/kamalesh404/kamalesh404@output/pacman-contribution-graph-dark.svg?v=136b7c5" />
+    <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/kamalesh404/kamalesh404@output/pacman-contribution-graph.svg?v=136b7c5" />
+    <img alt="pacman contribution graph" src="https://cdn.jsdelivr.net/gh/kamalesh404/kamalesh404@output/pacman-contribution-graph.svg?v=136b7c5" width="100%" />
   </picture>
 </p>
 
