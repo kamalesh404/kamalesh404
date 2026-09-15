@@ -65,7 +65,7 @@ jobs:
             content = content.replace(pacmanPath, (_, inner) => {
               const transforms = inner.match(/<animateTransform\b[\s\S]*?\/>/g) || [];
               fileReplaced++;
-              return `<g id="pacman">\n  <image x="0" y="0" width="16" height="16" preserveAspectRatio="xMidYMid meet" href="${FACE_DATA_URI}" />\n  ${transforms.join('\n  ')}\n</g>`;
+              return `<g id="pacman">\n  <image x="0" y="0" width="20" height="20" preserveAspectRatio="xMidYMid meet" href="${FACE_DATA_URI}" />\n  ${transforms.join('\n  ')}\n</g>`;
             });
 
             if (fileReplaced > 0) {
