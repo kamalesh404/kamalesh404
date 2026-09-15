@@ -32,10 +32,9 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Restore custom face sprite
+      - name: Validate custom face sprite
         run: |
-          test -f assets/pacman-face.txt
-          base64 -d assets/pacman-face.txt > assets/pacman-face.png
+          test -f assets/pacman-face.png
           file assets/pacman-face.png
           test -s assets/pacman-face.png
 
@@ -56,34 +55,17 @@ jobs:
           for (const file of files) {
             const filePath = path.join(distDir, file);
             let content = fs.readFileSync(filePath, 'utf8');
-            let searchFrom = 0;
+            const pacmanPath = /<path\s+id=["']pacman["'][^>]*>([\s\S]*?)<\/path>/g;
             let fileReplaced = 0;
 
-            // Avoid regex escaping issues. Find the Pac-Man path directly,
-            // preserve its translate/rotate animations, and replace only the
-            // visual shape with the user's face image.
-            while (true) {
-              const start = content.indexOf('<path id="pacman"', searchFrom);
-              if (start === -1) break;
-
-              const openEnd = content.indexOf('>', start);
-              const closeEnd = content.indexOf('</path>', openEnd);
-              if (openEnd === -1 || closeEnd === -1) {
-                throw new Error(`Malformed Pac-Man path in ${file}`);
-              }
-
-              const inner = content.slice(openEnd + 1, closeEnd);
-              const transforms = inner
-                .split('\n')
-                .map(line => line.trim())
-                .filter(line => line.startsWith('<animateTransform'));
-
-              const replacement = `<g id="pacman">\n  <image x="0" y="0" width="20" height="20" preserveAspectRatio="xMidYMid meet" href="${FACE_DATA_URI}" />\n  ${transforms.join('\n  ')}\n</g>`;
-
-              content = content.slice(0, start) + replacement + content.slice(closeEnd + '</path>'.length);
-              searchFrom = start + replacement.length;
+            // Replace only Pac-Man's visual path. Keep the translate and
+            // rotate animations on a group so the portrait still travels,
+            // turns, and loops through the contribution maze.
+            content = content.replace(pacmanPath, (_, inner) => {
+              const transforms = inner.match(/<animateTransform\b[\s\S]*?\/>/g) || [];
               fileReplaced++;
-            }
+              return `<g id="pacman">\n  <image x="0" y="0" width="16" height="16" preserveAspectRatio="xMidYMid meet" href="${FACE_DATA_URI}" />\n  ${transforms.join('\n  ')}\n</g>`;
+            });
 
             if (fileReplaced > 0) {
               replaced += fileReplaced;
