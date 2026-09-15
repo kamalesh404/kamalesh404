@@ -27,7 +27,7 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Replace Pac-Man with avatar
+      - name: Replace Pac-Man with custom face
         run: |
           cat > replace-pacman.js << 'ENDSCRIPT'
           const fs = require('fs');
@@ -36,35 +36,25 @@ jobs:
           const distDir = path.join(__dirname, 'dist');
           const files = fs.readdirSync(distDir).filter(f => f.endsWith('.svg'));
           
-          const AVATAR_URL = 'https://avatars.githubusercontent.com/u/228681348?v=4';
+          // Use the repository-hosted transparent face sprite instead of the GitHub avatar.
+          const FACE_URL = 'https://raw.githubusercontent.com/kamalesh404/kamalesh404/main/assets/pacman-face.png';
           
           files.forEach(file => {
             const filePath = path.join(distDir, file);
             let content = fs.readFileSync(filePath, 'utf8');
             
-            // Step 1: Replace the Pac-Man path element with avatar image
-            // The path has id="pacman" and spans multiple lines
+            // Replace only the Pac-Man character. Keep the generated contribution dots,
+            // paths, ghosts and animation timings untouched.
             content = content.replace(
-              /<path\s+id="pacman"\s+d="M 10,10[\s\S]*?Z"\s+fill="yellow">/g,
-              '<image x="0" y="0" width="20" height="20" href="' + AVATAR_URL + '">'
+              /<path\s+id="pacman"\b[^>]*>/g,
+              '<image id="pacman" x="0" y="0" width="20" height="20" preserveAspectRatio="xMidYMid meet" href="' + FACE_URL + '" />'
             );
             
-            // Step 2: Remove the fill color animation (yellow/red cycling)
-            // This animation is a child of the path/image element
+            // Remove the original Pac-Man fill animation if it remains in the generated SVG.
             content = content.replace(
-              /<animate\s+attributeName="fill"\s+dur="[^"]*"\s+repeatCount="indefinite"\s*\n?\s*calcMode="discrete"\s*\n?\s*keyTimes="[^"]*"\s*\n?\s*values="yellow;[^"]*"\s*\/>/g,
+              /<animate\b[^>]*attributeName="fill"[^>]*values="yellow;[^"]*"[^>]*\/>/g,
               ''
             );
-            
-            // Also handle single-line fill animation
-            content = content.replace(
-              /<animate attributeName="fill" dur="[^"]*" repeatCount="indefinite"\s+calcMode="discrete"\s+keyTimes="[^"]*"\s+values="yellow;[^"]*"\/>/g,
-              ''
-            );
-            
-            // Step 3: Close the image element properly
-            // The original path had </path> but we need </image>
-            content = content.replace(/<\/path>/g, '</image>');
             
             fs.writeFileSync(filePath, content);
             console.log(`Processed: ${file}`);
