@@ -60,13 +60,13 @@ jobs:
 
             // Replace the complete Pac-Man path, including its original animation.
             // The contribution dots and their positions remain untouched.
-            const pacmanBlock = /<path\s+id="pacman"\b[\s\S]*?<\/path>/g;
+            const pacmanBlock = /<path\s+id="pacman"[\s\S]*?<\/path>/g;
             const before = content;
             content = content.replace(pacmanBlock, customFace);
 
             // Fallback for a self-closing Pac-Man path.
             content = content.replace(
-              /<path\s+id="pacman"\b[^>]*\/>/g,
+              /<path\s+id="pacman"[^>]*\/>/g,
               customFace
             );
 
