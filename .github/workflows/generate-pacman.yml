@@ -46,8 +46,8 @@ jobs:
 
           const distDir = path.join(__dirname, 'dist');
           const facePath = path.join(__dirname, 'assets', 'pacman-face.png');
-          const faceBase64 = fs.readFileSync(facePath).toString('base64');
-          const FACE_DATA_URI = `data:image/png;base64,${faceBase64}`;
+          const FACE_HREF = 'https://raw.githubusercontent.com/kamalesh404/kamalesh404/main/assets/pacman-face.png?v=8bd65fc';
+          fs.accessSync(facePath, fs.constants.R_OK);
 
           const files = fs.readdirSync(distDir).filter(f => f.endsWith('.svg'));
           let replaced = 0;
@@ -64,7 +64,7 @@ jobs:
             content = content.replace(pacmanPath, (_, inner) => {
               const transforms = inner.match(/<animateTransform\b[\s\S]*?\/>/g) || [];
               fileReplaced++;
-              return `<g id="pacman">\n  <image x="0" y="0" width="16" height="16" preserveAspectRatio="xMidYMid meet" href="${FACE_DATA_URI}" />\n  ${transforms.join('\n  ')}\n</g>`;
+              return `<g id="pacman">\n  <image x="0" y="0" width="16" height="16" preserveAspectRatio="xMidYMid meet" href="${FACE_HREF}" />\n  ${transforms.join('\n  ')}\n</g>`;
             });
 
             if (fileReplaced > 0) {
