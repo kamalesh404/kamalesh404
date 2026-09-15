@@ -53,36 +53,47 @@ jobs:
           const files = fs.readdirSync(distDir).filter(f => f.endsWith('.svg'));
           let replaced = 0;
 
-          files.forEach(file => {
+          for (const file of files) {
             const filePath = path.join(distDir, file);
             let content = fs.readFileSync(filePath, 'utf8');
+            let searchFrom = 0;
+            let fileReplaced = 0;
 
-            // Keep Pac-Man's original translate + rotate animations, but replace
-            // only its visual path with the user's face image. This makes the
-            // face travel over the same contribution cells as the original Pac-Man.
-            const pacmanBlock = /<path\s+id="pacman"[^>]*>([\\s\\S]*?)<\\/path>/g;
-            const before = content;
+            // Avoid regex escaping issues. Find the Pac-Man path directly,
+            // preserve its translate/rotate animations, and replace only the
+            // visual shape with the user's face image.
+            while (true) {
+              const start = content.indexOf('<path id="pacman"', searchFrom);
+              if (start === -1) break;
 
-            content = content.replace(pacmanBlock, (match, inner) => {
-              const transforms = inner.match(/<animateTransform\\b[^>]*\\/>/g) || [];
-              return `<g id="pacman">\n  <image x="0" y="0" width="20" height="20" preserveAspectRatio="xMidYMid meet" href="${FACE_DATA_URI}" />\n  ${transforms.join('\n  ')}\n</g>`;
-            });
+              const openEnd = content.indexOf('>', start);
+              const closeEnd = content.indexOf('</path>', openEnd);
+              if (openEnd === -1 || closeEnd === -1) {
+                throw new Error(`Malformed Pac-Man path in ${file}`);
+              }
 
-            // Fallback if the upstream renderer ever emits a self-closing path.
-            content = content.replace(
-              /<path\s+id="pacman"[^>]*\/>/g,
-              `<image id="pacman" x="0" y="0" width="20" height="20" preserveAspectRatio="xMidYMid meet" href="${FACE_DATA_URI}" />`
-            );
+              const inner = content.slice(openEnd + 1, closeEnd);
+              const transforms = inner
+                .split('\n')
+                .map(line => line.trim())
+                .filter(line => line.startsWith('<animateTransform'));
 
-            if (content !== before) {
-              replaced++;
-              console.log(`Custom animated face installed in ${file}`);
+              const replacement = `<g id="pacman">\n  <image x="0" y="0" width="20" height="20" preserveAspectRatio="xMidYMid meet" href="${FACE_DATA_URI}" />\n  ${transforms.join('\n  ')}\n</g>`;
+
+              content = content.slice(0, start) + replacement + content.slice(closeEnd + '</path>'.length);
+              searchFrom = start + replacement.length;
+              fileReplaced++;
+            }
+
+            if (fileReplaced > 0) {
+              replaced += fileReplaced;
+              console.log(`Custom animated face installed in ${file}: ${fileReplaced}`);
             } else {
               console.warn(`Pac-Man path not found in ${file}`);
             }
 
             fs.writeFileSync(filePath, content);
-          });
+          }
 
           if (replaced === 0) {
             throw new Error('Pac-Man path was not found in any generated SVG');
