@@ -18,71 +18,12 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 1
 
       - name: generate contribution graph SVGs
         uses: abozanona/pacman-contribution-graph@main
         with:
           github_user_name: ${{ github.repository_owner }}
           games: 'pacman'
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-
-      - name: Validate custom face sprite
-        run: |
-          test -f assets/pacman-face.png
-          file assets/pacman-face.png
-          test -s assets/pacman-face.png
-
-      - name: Replace Pac-Man with custom face
-        run: |
-          cat > replace-pacman.js << 'ENDSCRIPT'
-          const fs = require('fs');
-          const path = require('path');
-
-          const distDir = path.join(__dirname, 'dist');
-          const facePath = path.join(__dirname, 'assets', 'pacman-face.png');
-          const faceBase64 = fs.readFileSync(facePath).toString('base64');
-          const FACE_DATA_URI = `data:image/png;base64,${faceBase64}`;
-
-          const files = fs.readdirSync(distDir).filter(f => f.endsWith('.svg'));
-          let replaced = 0;
-
-          for (const file of files) {
-            const filePath = path.join(distDir, file);
-            let content = fs.readFileSync(filePath, 'utf8');
-            const pacmanPath = /<path\s+id=["']pacman["'][^>]*>([\s\S]*?)<\/path>/g;
-            let fileReplaced = 0;
-
-            // Replace only Pac-Man's visual path. Keep the translate and
-            // rotate animations on a group so the portrait still travels,
-            // turns, and loops through the contribution maze.
-            content = content.replace(pacmanPath, (_, inner) => {
-              const transforms = inner.match(/<animateTransform\b[\s\S]*?\/>/g) || [];
-              fileReplaced++;
-              return `<g id="pacman">\n  <image x="0" y="0" width="20" height="20" preserveAspectRatio="xMidYMid meet" href="${FACE_DATA_URI}" />\n  ${transforms.join('\n  ')}\n</g>`;
-            });
-
-            if (fileReplaced > 0) {
-              replaced += fileReplaced;
-              console.log(`Custom animated face installed in ${file}: ${fileReplaced}`);
-            } else {
-              console.warn(`Pac-Man path not found in ${file}`);
-            }
-
-            fs.writeFileSync(filePath, content);
-          }
-
-          if (replaced === 0) {
-            throw new Error('Pac-Man path was not found in any generated SVG');
-          }
-          ENDSCRIPT
-
-          node replace-pacman.js
 
       - name: push SVGs to the output branch
         uses: crazy-max/ghaction-github-pages@v3.1.0
@@ -91,3 +32,4 @@ jobs:
           build_dir: dist
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
