@@ -10,9 +10,10 @@
 
 <!-- Player stats -->
 <p>
-  <img src="https://komarev.com/ghpvc/?username=kamalesh4044&label=PROFILE+HITS&color=FF4500&style=for-the-badge" />
+  <img src="https://komarev.com/ghpvc/?username=kamalesh404&label=PROFILE+HITS&color=FF4500&style=for-the-badge" />
   <img src="https://img.shields.io/github/followers/kamalesh404?label=SQUAD&style=for-the-badge&color=8B0000" />
   <img src="https://img.shields.io/github/stars/kamalesh404?label=TOTAL+STARS&style=for-the-badge&color=FFD700" />
+  <img src="https://img.shields.io/badge/STATUS-SHIPPING_BUILDS-00E5FF?style=for-the-badge" />
 </p>
 
 <!-- Socials -->
@@ -46,15 +47,15 @@
 
 ---
 
-## 🔥 Featured builds
+## 🔥 Featured builds & Recent Projects
 
 <table>
 <tr>
 <td width="50%">
 
 ### 🎯 BulletStorm Arena
-**Browser multiplayer FPS** — real-time Socket.io battles in Three.js
-`JavaScript` `Three.js` `Socket.io` · ⭐ 15
+**Browser multiplayer FPS** — real-time Socket.io battles in Three.js  
+`JavaScript` `Three.js` `Socket.io` · ⭐ 15  
 <br><br>
 [![Play](https://img.shields.io/badge/PLAY-FF4500?style=flat&logo=googlechrome&logoColor=white)](https://multiplayer-fps-game.onrender.com)
 [![Repo](https://img.shields.io/badge/REPO-0D1117?style=flat&logo=github&logoColor=white)](https://github.com/kamalesh404/multiplayer-fps-game)
@@ -62,52 +63,52 @@
 </td>
 <td width="50%">
 
-### 🛡️ CrowdSafe AI
-**Stampede-prediction system** — YOLO + OpenCV real-time crowd monitoring
-`Python` `YOLO` `OpenCV` · ⭐ 14
+### 🧠 ClientBrain
+**Sellable RAG chatbot SaaS** — embeddable widget, multi-tenant, billing-ready  
+`Next.js` `FastAPI` `pgvector` · 🆕 latest  
 <br><br>
-[![Repo](https://img.shields.io/badge/REPO-0D1117?style=flat&logo=github&logoColor=white)](https://github.com/kamalesh404/crowd_detection)
+[![Repo](https://img.shields.io/badge/REPO-0D1117?style=flat&logo=github&logoColor=white)](https://github.com/kamalesh404/ClientBrain)
 
 </td>
 </tr>
 <tr>
 <td width="50%">
 
-### 🍛 NammaHotel — OoruOota
-**TN mess food-ordering site** — menu, combos, cart, checkout, live tracking
-`JavaScript` `Zero dependencies` · ⭐ 2
+### 🏛️ Kingston Campus 3D
+**3D open-world campus game** — Java 21, jMonkeyEngine, Bullet physics & NPC AI  
+`Java 21` `jMonkeyEngine` `Bullet Physics` · ⭐ 2  
 <br><br>
-[![Repo](https://img.shields.io/badge/REPO-0D1117?style=flat&logo=github&logoColor=white)](https://github.com/kamalesh404/NammaHotel)
+[![Repo](https://img.shields.io/badge/REPO-0D1117?style=flat&logo=github&logoColor=white)](https://github.com/kamalesh404/Kingston-Campus-3D-Game)
+
+</td>
+<td width="50%">
+
+### 🌾 AgriSense
+**AI crop disease detection & smart farming** — 10-disease CV engine, SIH-ready  
+`Python` `OpenCV` `PyTorch` `FastAPI` · ⭐ 2  
+<br><br>
+[![Repo](https://img.shields.io/badge/REPO-0D1117?style=flat&logo=github&logoColor=white)](https://github.com/kamalesh404/AgriSense)
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+### 🎵 SpotifyQuiet
+**Ad-free audio automation app** — background ad detector & mute controller  
+`Kotlin` `Android` `Automation` · ⭐ 2  
+<br><br>
+[![Repo](https://img.shields.io/badge/REPO-0D1117?style=flat&logo=github&logoColor=white)](https://github.com/kamalesh404/SpotifyQuiet)
 
 </td>
 <td width="50%">
 
 ### 🏃 Void Runner
-**Canvas runner game** — fast, playable in one click
-`JavaScript` `Canvas` · ⭐ 13
+**Canvas runner game** — fast-paced arcade action playable in one click  
+`JavaScript` `Canvas` · ⭐ 13  
 <br><br>
 [![Play](https://img.shields.io/badge/PLAY-FF4500?style=flat&logo=vercel&logoColor=white)](https://void-runner-seven.vercel.app)
 [![Repo](https://img.shields.io/badge/REPO-0D1117?style=flat&logo=github&logoColor=white)](https://github.com/kamalesh404/void-runner)
-
-</td>
-</tr>
-<tr>
-<td width="50%">
-
-### 🌆 Open-World Game
-**3D sustainable smart-city sim** — jMonkeyEngine, vehicle physics, racing
-`Java` `jMonkeyEngine` `Gradle` · ⭐ 3
-<br><br>
-[![Repo](https://img.shields.io/badge/REPO-0D1117?style=flat&logo=github&logoColor=white)](https://github.com/kamalesh404/Open-World-Game)
-
-</td>
-<td width="50%">
-
-### 🧠 ClientBrain
-**Sellable RAG chatbot SaaS** — embeddable widget, multi-tenant, billing-ready
-`Next.js` `FastAPI` `pgvector` · 🆕 latest
-<br><br>
-[![Repo](https://img.shields.io/badge/REPO-0D1117?style=flat&logo=github&logoColor=white)](https://github.com/kamalesh404/ClientBrain)
 
 </td>
 </tr>
@@ -152,6 +153,20 @@
 </p>
 
 <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/fire.png" width="100%" />
+
+## 🏆 PLAYER PROGRESSION & STATS
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=kamalesh404&show_icons=true&bg_color=0D1117&title_color=FF4500&text_color=B3B3B3&icon_color=FFD700&border_color=FF4500&hide_border=false" height="180"/>
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=kamalesh404&theme=onedark&border_color=FF4500&fire=FF4500&ring=FFD700" height="180"/>
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=kamalesh404&layout=compact&bg_color=0D1117&title_color=FF4500&text_color=B3B3B3&border_color=FF4500&hide_border=false" height="180"/>
+</p>
+
+<p align="center">
+  <a href="https://github.com/ryo-ma/github-profile-trophy">
+    <img src="https://github-profile-trophy.vercel.app/?username=kamalesh404&theme=onedark&column=7&margin-w=15&margin-h=15&no-frame=true&no-bg=true" alt="Kamalesh's Trophies" />
+  </a>
+</p>
 
 ## 🟡 PAC-MAN CONTRIBUTION BOX
 
