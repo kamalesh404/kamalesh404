@@ -95,10 +95,30 @@
 <td width="50%">
 
 ### 🎵 SpotifyQuiet
-**Ad-free audio automation app** — background ad detector & mute controller  
-`Kotlin` `Android` `Automation` · ⭐ 2  
+**Spotify companion & ad-event recovery engine** — event-driven media session listener, playback heuristics & auto-restart on Android 15  
+`Kotlin` `Android 15` `Jetpack Compose` · 🆕 latest  
 <br><br>
 [![Repo](https://img.shields.io/badge/REPO-0D1117?style=flat&logo=github&logoColor=white)](https://github.com/kamalesh404/SpotifyQuiet)
+
+</td>
+<td width="50%">
+
+### ⚙️ WorkflowForge
+**Distributed DAG workflow orchestration engine** — lightweight Temporal/Airflow alternative with pause/resume, cron & React dashboard  
+`TypeScript` `Node.js` `FastAPI` `Docker` · ⭐ 2  
+<br><br>
+[![Repo](https://img.shields.io/badge/REPO-0D1117?style=flat&logo=github&logoColor=white)](https://github.com/kamalesh404/WorkflowForge)
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+### 🔐 FINGER
+**Multi-factor & biometric verification platform** — secure multi-stage authentication with hardware & biometric proof pipeline  
+`Python` `FastAPI` `Security` · ⭐ 1  
+<br><br>
+[![Repo](https://img.shields.io/badge/REPO-0D1117?style=flat&logo=github&logoColor=white)](https://github.com/kamalesh404/FINGER)
 
 </td>
 <td width="50%">
@@ -114,7 +134,7 @@
 </tr>
 </table>
 
-> [View all 57 repositories →](https://github.com/kamalesh404?tab=repositories)
+> [View all repositories on GitHub →](https://github.com/kamalesh404?tab=repositories)
 
 ---
 
