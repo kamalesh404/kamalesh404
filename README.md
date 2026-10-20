@@ -124,15 +124,15 @@
 <h2>⚔️ WEAPONS OF CHOICE</h2>
 <p>
   <img src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=700&size=20&duration=3000&pause=500&color=FFD700&vCenter=true&lines=>+PROGRAMMING_LANGUAGES" alt="Programming Languages" /><br>
-  <img src="https://skillicons.dev/icons?i=c,cpp,cs,java,python,js,ts,html,css,php,ruby,go,rust" height="45"/>
+  <img src="https://skillicons.dev/icons?i=c,cpp,cs,java,kotlin,python,js,ts,html,css,go,rust" height="45"/>
   <br><br>
 
   <img src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=700&size=20&duration=3000&pause=500&color=FFD700&vCenter=true&lines=>+FRAMEWORKS_%26_DATABASES" alt="Frameworks & Databases" /><br>
-  <img src="https://skillicons.dev/icons?i=nodejs,express,react,nextjs,vue,angular,mysql,mongodb,postgres,firebase" height="45"/>
+  <img src="https://skillicons.dev/icons?i=nodejs,express,react,nextjs,tailwind,fastapi,pytorch,mongodb,postgres,firebase" height="45"/>
   <br><br>
 
   <img src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=700&size=20&duration=3000&pause=500&color=FFD700&vCenter=true&lines=>+TOOLS,_OS_%26_GAME_ENGINES" alt="Tools & Game Engines" /><br>
-  <img src="https://skillicons.dev/icons?i=git,github,docker,aws,linux,ubuntu,windows,bash,powershell,vscode,visualstudio,figma,unity,unreal,blender" height="45"/>
+  <img src="https://skillicons.dev/icons?i=threejs,git,github,docker,androidstudio,linux,ubuntu,windows,bash,powershell,vscode,unity,godot,blender" height="45"/>
 </p>
 
 <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/fire.png" width="100%" />
