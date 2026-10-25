@@ -35,7 +35,7 @@
 
 ## 🎮 About me
 
-- 🎓 **CS student** from Arcot, Tamil Nadu, India
+- 🎓 **CS student** 
 - 🔫 Building **browser multiplayer games** — Three.js FPS arenas, Godot projects, Java 3D cities
 - 🧠 Shipping **AI builds** — YOLO crowd safety, RAG chatbots, voice cloning, LLM tooling
 - ⚡ Into **real-time systems** — sockets, game loops, live dashboards
@@ -43,8 +43,7 @@
 
 ## 🎯 Currently
 
-- 🔬 Building **Unmai Lab** — a fake-forward forensics stall for college expos
-- 🍛 Fresh out: **NammaHotel** — TN mess food-ordering site (zero dependencies)
+
 - 🤝 Open to hackathons, collabs and playtesting new games
 
 ---
