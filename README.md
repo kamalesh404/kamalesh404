@@ -1,12 +1,14 @@
 <div align="center">
 
-<!-- Banner -->
-<img src="https://cdna.artstation.com/p/assets/images/images/028/102/058/original/pixel-jeff-matrix-s.gif?1593487263" width="70%" />
+<!-- Custom Starfield Particle Backdrop -->
+<a href="https://github.com/kamalesh404">
+  <img src="https://raw.githubusercontent.com/kamalesh404/kamalesh404/main/assets/starfield-backdrop.svg" width="100%" alt="Kamalesh Cosmic Starfield & Particle Backdrop" />
+</a>
 
-<!-- Name plate -->
-<h1>
-  <img src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=800&size=42&duration=2500&pause=1000&color=FF4500&center=true&vCenter=true&width=800&lines=KAMALESH;GAME+DEVELOPER;AI+BUILDER" />
-</h1>
+<!-- Dynamic Status Typing -->
+<p>
+  <img src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=800&size=26&duration=2400&pause=1000&color=FF4500&center=true&vCenter=true&width=750&lines=NEXT-GEN+AI+SYSTEMS;BROWSER+MULTIPLAYER+GAMES;HIGH-PERFORMANCE+ENGINEERING" />
+</p>
 
 <!-- Player stats -->
 <p>
