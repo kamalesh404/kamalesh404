@@ -188,7 +188,7 @@
   </a>
 </p>
 
-## 🟡 PAC-MAN & SNAKE CONTRIBUTIONS
+## 🟡 PAC-MAN CONTRIBUTION BOX
 
 <p align="center">
   <picture>
@@ -196,10 +196,6 @@
     <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/kamalesh404/kamalesh404/output/pacman-contribution-graph.svg" />
     <img alt="pacman contribution graph" src="https://raw.githubusercontent.com/kamalesh404/kamalesh404/output/pacman-contribution-graph.svg" width="100%" />
   </picture>
-</p>
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/kamalesh404/kamalesh404/output/github-snake.svg" alt="GitHub contribution snake animation" width="100%" />
 </p>
 
 ## ⚡ CODER PROFILE
