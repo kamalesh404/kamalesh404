@@ -1,8 +1,8 @@
 <div align="center">
 
-<!-- Custom Starfield Particle Backdrop -->
-<a href="https://github.com/kamalesh404">
-  <img src="https://raw.githubusercontent.com/kamalesh404/kamalesh404/main/assets/starfield-backdrop.svg" width="100%" alt="Kamalesh Cosmic Starfield & Particle Backdrop" />
+<!-- Futuristic Cyber Neural Interactive Banner -->
+<a href="https://kamalesh404.github.io/kamalesh404/banner.html" title="Click to launch interactive 3D physics & neural network canvas">
+  <img src="https://raw.githubusercontent.com/kamalesh404/kamalesh404/main/assets/cyber-banner.svg" width="100%" alt="Kamalesh — AI Engineer · Game Architect · Hardware Hacker" />
 </a>
 
 <!-- Dynamic Status Typing -->

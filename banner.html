@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futuristic GitHub Banner — Kamalesh</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Rajdhani', sans-serif;
+            overflow: hidden;
+        }
+
+        /* Main Container */
+        #banner {
+            width: 850px;
+            height: 300px;
+            background: radial-gradient(circle at 50% 50%, #0a1128 0%, #01030a 100%);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(0, 243, 255, 0.2);
+            box-shadow: 0 0 40px rgba(0, 0, 0, 0.8), inset 0 0 50px rgba(0, 243, 255, 0.05);
+            perspective: 1000px;
+            user-select: none;
+            border-radius: 12px;
+        }
+
+        /* Scanlines */
+        .scanlines {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.3) 51%);
+            background-size: 100% 4px;
+            z-index: 50;
+            pointer-events: none;
+            opacity: 0.6;
+        }
+
+        /* 3D Typography */
+        .title-3d {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 900;
+            font-size: 4.8rem;
+            color: #ffffff;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            text-shadow: 
+                0px 1px 0px #a0c4c4,
+                0px 2px 0px #70a4a4,
+                0px 3px 0px #408484,
+                0px 4px 0px #106464,
+                0px 5px 0px #004444,
+                0px 6px 0px #002222,
+                0px 0px 20px rgba(0, 243, 255, 0.8),
+                0px 10px 30px rgba(0, 243, 255, 0.6);
+            margin: 0;
+            line-height: 1;
+        }
+
+        /* Glowing Subtitle */
+        .subtitle {
+            font-size: 1.05rem;
+            color: #00f3ff;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-shadow: 0 0 10px rgba(0, 243, 255, 0.8);
+            margin-top: 10px;
+        }
+
+        .subtitle .dot {
+            color: #ff7b00;
+            text-shadow: 0 0 10px rgba(255, 123, 0, 0.8);
+            margin: 0 8px;
+        }
+
+        /* Tech Pills */
+        .pill {
+            background: rgba(0, 243, 255, 0.05);
+            border: 1px solid rgba(0, 243, 255, 0.3);
+            color: #a0e8ff;
+            font-weight: 700;
+            font-size: 0.8rem;
+            padding: 4px 16px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+            cursor: pointer;
+        }
+
+        .pill:hover {
+            border-color: #ff7b00;
+            color: #ffffff;
+            background: rgba(255, 123, 0, 0.15);
+            box-shadow: 0 0 15px rgba(255, 123, 0, 0.6), inset 0 0 10px rgba(255, 123, 0, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .pill.orange {
+            border-color: rgba(255, 123, 0, 0.4);
+            color: #ffd1a0;
+        }
+
+        .pill.orange:hover {
+            border-color: #00f3ff;
+            background: rgba(0, 243, 255, 0.15);
+            box-shadow: 0 0 15px rgba(0, 243, 255, 0.6), inset 0 0 10px rgba(0, 243, 255, 0.4);
+            color: #ffffff;
+        }
+
+        /* Canvas */
+        #neural-canvas {
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+        }
+
+        /* Circuit Board Right Side */
+        .circuit-container {
+            position: absolute;
+            right: -20px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 300px;
+            height: 300px;
+            z-index: 2;
+            opacity: 0.85;
+            pointer-events: none;
+        }
+
+        .circuit-path {
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 1000;
+            animation: drawPath 4s infinite linear;
+        }
+
+        .cpu-core {
+            animation: pulseCore 2s infinite alternate;
+        }
+
+        @keyframes drawPath {
+            0% { stroke-dashoffset: 1000; }
+            50% { stroke-dashoffset: 0; }
+            100% { stroke-dashoffset: -1000; }
+        }
+
+        @keyframes pulseCore {
+            0% { filter: drop-shadow(0 0 5px #00f3ff); fill: #008899; }
+            100% { filter: drop-shadow(0 0 25px #00f3ff) drop-shadow(0 0 45px #00f3ff); fill: #ffffff; }
+        }
+
+        /* Layer containers for Parallax */
+        .parallax-layer {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.1s ease-out;
+            will-change: transform;
+        }
+
+        .layer-text { z-index: 10; }
+        .layer-pills { z-index: 15; justify-content: flex-end; padding-bottom: 25px; }
+
+        /* Grid Floor */
+        .grid-floor {
+            position: absolute;
+            bottom: -50px;
+            left: -50%;
+            width: 200%;
+            height: 150px;
+            background-image: 
+                linear-gradient(to right, rgba(0, 243, 255, 0.1) 1px, transparent 1px),
+                linear-gradient(to top, rgba(0, 243, 255, 0.2) 1px, transparent 1px);
+            background-size: 30px 30px;
+            transform: rotateX(75deg);
+            z-index: 0;
+            mask-image: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0));
+            -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0));
+        }
+
+        /* Corner HUD Accents */
+        .hud-corner {
+            position: absolute;
+            width: 14px;
+            height: 14px;
+            border-color: #00f3ff;
+            z-index: 40;
+            pointer-events: none;
+        }
+        .hud-tl { top: 8px; left: 8px; border-top: 2px solid #00f3ff; border-left: 2px solid #00f3ff; }
+        .hud-tr { top: 8px; right: 8px; border-top: 2px solid #00f3ff; border-right: 2px solid #00f3ff; }
+        .hud-bl { bottom: 8px; left: 8px; border-bottom: 2px solid #00f3ff; border-left: 2px solid #00f3ff; }
+        .hud-br { bottom: 8px; right: 8px; border-bottom: 2px solid #00f3ff; border-right: 2px solid #00f3ff; }
+        
+        .hud-tag {
+            position: absolute;
+            top: 10px;
+            left: 24px;
+            font-size: 0.65rem;
+            color: rgba(0, 243, 255, 0.6);
+            letter-spacing: 0.2em;
+            font-family: 'Orbitron', monospace;
+            z-index: 40;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="banner">
+        <!-- HUD Corners -->
+        <div class="hud-corner hud-tl"></div>
+        <div class="hud-corner hud-tr"></div>
+        <div class="hud-corner hud-bl"></div>
+        <div class="hud-corner hud-br"></div>
+        <div class="hud-tag">SYS_ID // KAMALESH.404 · NEURAL_CORE: ACTIVE</div>
+
+        <!-- Background Grid -->
+        <div class="grid-floor"></div>
+
+        <!-- Left AI Neural Network Canvas -->
+        <canvas id="neural-canvas"></canvas>
+
+        <!-- Right Hardware Circuit SVG -->
+        <div class="circuit-container" id="layer-circuit">
+            <svg viewBox="0 0 300 300" class="w-full h-full">
+                <defs>
+                    <filter id="glow">
+                        <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                        <feMerge>
+                            <feMergeNode in="coloredBlur"/>
+                            <feMergeNode in="SourceGraphic"/>
+                        </feMerge>
+                    </filter>
+                </defs>
+
+                <!-- Circuit traces -->
+                <g stroke="#00f3ff" stroke-width="2" fill="none" opacity="0.65">
+                    <path d="M150 150 L220 80 L280 80" class="circuit-path" />
+                    <path d="M150 150 L220 220 L280 220" class="circuit-path" />
+                    <path d="M150 150 L150 50 L200 50" class="circuit-path" />
+                    <path d="M150 150 L150 250 L200 250" class="circuit-path" />
+                    
+                    <path d="M120 120 L80 80" stroke="#ff7b00" class="circuit-path" style="animation-delay: 1s;" />
+                    <path d="M120 180 L80 220" stroke="#ff7b00" class="circuit-path" style="animation-delay: 1.5s;" />
+                </g>
+
+                <!-- CPU Base -->
+                <rect x="110" y="110" width="80" height="80" fill="#050a15" stroke="#00f3ff" stroke-width="2" filter="url(#glow)" />
+                <rect x="120" y="120" width="60" height="60" fill="#02040a" stroke="#ff7b00" stroke-width="1" />
+                
+                <!-- CPU Core Pulsing -->
+                <rect x="135" y="135" width="30" height="30" class="cpu-core" />
+                
+                <!-- Pins -->
+                <g fill="#00f3ff">
+                    <!-- Top -->
+                    <rect x="120" y="105" width="4" height="5" /> <rect x="130" y="105" width="4" height="5" />
+                    <rect x="140" y="105" width="4" height="5" /> <rect x="150" y="105" width="4" height="5" />
+                    <rect x="160" y="105" width="4" height="5" /> <rect x="170" y="105" width="4" height="5" />
+                    <!-- Bottom -->
+                    <rect x="120" y="190" width="4" height="5" /> <rect x="130" y="190" width="4" height="5" />
+                    <rect x="140" y="190" width="4" height="5" /> <rect x="150" y="190" width="4" height="5" />
+                    <rect x="160" y="190" width="4" height="5" /> <rect x="170" y="190" width="4" height="5" />
+                    <!-- Left -->
+                    <rect x="105" y="120" width="5" height="4" /> <rect x="105" y="130" width="5" height="4" />
+                    <rect x="105" y="140" width="5" height="4" /> <rect x="105" y="150" width="5" height="4" />
+                    <rect x="105" y="160" width="5" height="4" /> <rect x="105" y="170" width="5" height="4" />
+                    <!-- Right -->
+                    <rect x="190" y="120" width="5" height="4" /> <rect x="190" y="130" width="5" height="4" />
+                    <rect x="190" y="140" width="5" height="4" /> <rect x="190" y="150" width="5" height="4" />
+                    <rect x="190" y="160" width="5" height="4" /> <rect x="190" y="170" width="5" height="4" />
+                </g>
+            </svg>
+        </div>
+
+        <!-- Center 3D Typography -->
+        <div class="parallax-layer layer-text" id="layer-text">
+            <h1 class="title-3d">KAMALESH</h1>
+            <h2 class="subtitle">
+                AI ENGINEER <span class="dot">•</span> GAME ARCHITECT <span class="dot">•</span> HARDWARE HACKER
+            </h2>
+        </div>
+
+        <!-- Bottom Tech Pills -->
+        <div class="parallax-layer layer-pills" id="layer-pills">
+            <div class="flex gap-4">
+                <div class="pill">PYTORCH</div>
+                <div class="pill orange">YOLO</div>
+                <div class="pill">GODOT</div>
+                <div class="pill orange">ESP32</div>
+                <div class="pill">ROS</div>
+                <div class="pill">C++ / PYTHON</div>
+            </div>
+        </div>
+
+        <!-- Scanlines Overlay -->
+        <div class="scanlines"></div>
+    </div>
+
+    <script>
+        // --- PARALLAX EFFECT ---
+        const banner = document.getElementById('banner');
+        const layerText = document.getElementById('layer-text');
+        const layerCircuit = document.getElementById('layer-circuit');
+        const layerPills = document.getElementById('layer-pills');
+
+        let mouse = { x: -1000, y: -1000 };
+
+        banner.addEventListener('mousemove', (e) => {
+            const rect = banner.getBoundingClientRect();
+            const x = (e.clientX - rect.left - rect.width / 2) / (rect.width / 2);
+            const y = (e.clientY - rect.top - rect.height / 2) / (rect.height / 2);
+
+            mouse.x = e.clientX - rect.left;
+            mouse.y = e.clientY - rect.top;
+
+            layerText.style.transform = `translate(${x * 12}px, ${y * 12}px) rotateY(${x * 3}deg) rotateX(${-y * 3}deg)`;
+            layerCircuit.style.transform = `translateY(-50%) translate(${x * -16}px, ${y * -16}px) scale(1.05)`;
+            layerPills.style.transform = `translate(${x * 6}px, ${y * 6}px)`;
+        });
+
+        banner.addEventListener('mouseleave', () => {
+            layerText.style.transform = `translate(0, 0) rotateY(0) rotateX(0)`;
+            layerCircuit.style.transform = `translateY(-50%) translate(0, 0) scale(1)`;
+            layerPills.style.transform = `translate(0, 0)`;
+            mouse.x = -1000;
+            mouse.y = -1000;
+        });
+
+        // --- CANVAS NEURAL NETWORK ---
+        const canvas = document.getElementById('neural-canvas');
+        const ctx = canvas.getContext('2d');
+        
+        canvas.width = 850;
+        canvas.height = 300;
+
+        const particles = [];
+        const numParticles = 65;
+        const connectionDistance = 85;
+        const mouseConnectionDistance = 125;
+
+        class Particle {
+            constructor() {
+                this.x = Math.random() * 460;
+                this.y = Math.random() * canvas.height;
+                this.vx = (Math.random() - 0.5) * 1.1;
+                this.vy = (Math.random() - 0.5) * 1.1;
+                this.radius = Math.random() * 2 + 1;
+                this.color = Math.random() > 0.8 ? '#ff7b00' : '#00f3ff';
+            }
+
+            update() {
+                this.x += this.vx;
+                this.y += this.vy;
+
+                if (this.x < 0 || this.x > 480) this.vx *= -1;
+                if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
+            }
+
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                ctx.fillStyle = this.color;
+                ctx.shadowBlur = 10;
+                ctx.shadowColor = this.color;
+                ctx.fill();
+                ctx.shadowBlur = 0;
+            }
+        }
+
+        for (let i = 0; i < numParticles; i++) {
+            particles.push(new Particle());
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            for (let i = 0; i < particles.length; i++) {
+                particles[i].update();
+                particles[i].draw();
+
+                for (let j = i; j < particles.length; j++) {
+                    const dx = particles[i].x - particles[j].x;
+                    const dy = particles[i].y - particles[j].y;
+                    const distance = Math.sqrt(dx * dx + dy * dy);
+
+                    if (distance < connectionDistance) {
+                        ctx.beginPath();
+                        ctx.moveTo(particles[i].x, particles[i].y);
+                        ctx.lineTo(particles[j].x, particles[j].y);
+                        const opacity = 1 - (distance / connectionDistance);
+                        ctx.strokeStyle = `rgba(0, 243, 255, ${opacity * 0.45})`;
+                        ctx.lineWidth = 1;
+                        ctx.stroke();
+                    }
+                }
+
+                const mouseDx = particles[i].x - mouse.x;
+                const mouseDy = particles[i].y - mouse.y;
+                const mouseDistance = Math.sqrt(mouseDx * mouseDx + mouseDy * mouseDy);
+
+                if (mouseDistance < mouseConnectionDistance) {
+                    ctx.beginPath();
+                    ctx.moveTo(particles[i].x, particles[i].y);
+                    ctx.lineTo(mouse.x, mouse.y);
+                    const opacity = 1 - (mouseDistance / mouseConnectionDistance);
+                    ctx.strokeStyle = particles[i].color === '#ff7b00' ? `rgba(255, 123, 0, ${opacity})` : `rgba(0, 243, 255, ${opacity})`;
+                    ctx.lineWidth = 1.5;
+                    ctx.stroke();
+                }
+            }
+
+            requestAnimationFrame(animate);
+        }
+
+        animate();
+    </script>
+</body>
+</html>

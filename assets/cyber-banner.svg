@@ -1,0 +1,432 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 300" width="100%" height="300" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <!-- Fonts & Animations in CDATA -->
+    <style><![CDATA[
+      @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@800;900&family=Rajdhani:wght@600;700&display=swap');
+
+      * {
+        box-sizing: border-box;
+      }
+
+      /* Glow & Text Styling */
+      .title-main {
+        font-family: 'Orbitron', 'Rajdhani', -apple-system, BlinkMacSystemFont, 'Segoe UI', Impact, monospace, sans-serif;
+        font-weight: 900;
+        font-size: 68px;
+        letter-spacing: 0.08em;
+        text-anchor: middle;
+        fill: #ffffff;
+      }
+
+      .extrusion {
+        font-family: 'Orbitron', 'Rajdhani', -apple-system, BlinkMacSystemFont, 'Segoe UI', Impact, monospace, sans-serif;
+        font-weight: 900;
+        font-size: 68px;
+        letter-spacing: 0.08em;
+        text-anchor: middle;
+      }
+
+      .subtitle-text {
+        font-family: 'Rajdhani', 'Orbitron', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        font-weight: 700;
+        font-size: 15px;
+        letter-spacing: 0.22em;
+        text-anchor: middle;
+        fill: #00f3ff;
+      }
+
+      .pill-text {
+        font-family: 'Rajdhani', 'Orbitron', sans-serif;
+        font-weight: 700;
+        font-size: 11.5px;
+        letter-spacing: 0.12em;
+        text-anchor: middle;
+        dominant-baseline: central;
+      }
+
+      .hud-label {
+        font-family: 'Orbitron', monospace;
+        font-size: 8.5px;
+        letter-spacing: 0.2em;
+        fill: rgba(0, 243, 255, 0.65);
+      }
+
+      /* Pulsing keyframe animations */
+      @keyframes pulseGlow {
+        0%, 100% { filter: drop-shadow(0 0 15px rgba(0, 243, 255, 0.7)) drop-shadow(0 0 30px rgba(0, 243, 255, 0.4)); }
+        50% { filter: drop-shadow(0 0 25px rgba(0, 243, 255, 0.95)) drop-shadow(0 0 50px rgba(0, 243, 255, 0.7)); }
+      }
+
+      @keyframes coreGlow {
+        0% { fill: #008899; filter: drop-shadow(0 0 4px #00f3ff); }
+        50% { fill: #00f3ff; filter: drop-shadow(0 0 16px #00f3ff) drop-shadow(0 0 28px #00f3ff); }
+        100% { fill: #ffffff; filter: drop-shadow(0 0 25px #00f3ff) drop-shadow(0 0 45px #00f3ff); }
+      }
+
+      @keyframes drawCircuit {
+        0% { stroke-dashoffset: 400; }
+        50% { stroke-dashoffset: 0; }
+        100% { stroke-dashoffset: -400; }
+      }
+
+      @keyframes particleFloatA {
+        0%, 100% { transform: translate(0px, 0px); }
+        50% { transform: translate(8px, -12px); }
+      }
+
+      @keyframes particleFloatB {
+        0%, 100% { transform: translate(0px, 0px); }
+        50% { transform: translate(-10px, 10px); }
+      }
+
+      @keyframes particleFloatC {
+        0%, 100% { transform: translate(0px, 0px); }
+        50% { transform: translate(6px, 14px); }
+      }
+
+      @keyframes gridScan {
+        0% { opacity: 0.45; }
+        50% { opacity: 0.85; }
+        100% { opacity: 0.45; }
+      }
+
+      .circuit-line {
+        stroke-dasharray: 180;
+        stroke-dashoffset: 180;
+        animation: drawCircuit 4.5s infinite linear;
+      }
+
+      .circuit-line-delayed {
+        stroke-dasharray: 180;
+        stroke-dashoffset: 180;
+        animation: drawCircuit 4.5s infinite linear;
+        animation-delay: 1.5s;
+      }
+
+      .cpu-core-pulse {
+        animation: coreGlow 2.2s infinite alternate ease-in-out;
+      }
+
+      .title-group {
+        animation: pulseGlow 4s infinite ease-in-out;
+      }
+
+      .neural-float-1 { animation: particleFloatA 5s infinite ease-in-out; }
+      .neural-float-2 { animation: particleFloatB 6.5s infinite ease-in-out; }
+      .neural-float-3 { animation: particleFloatC 5.8s infinite ease-in-out; }
+
+      .grid-pulse { animation: gridScan 4s infinite ease-in-out; }
+
+      /* Pill hover responsiveness */
+      .tech-pill {
+        cursor: pointer;
+        transition: transform 0.25s ease, filter 0.25s ease;
+      }
+      .tech-pill:hover {
+        transform: translateY(-2px);
+        filter: brightness(1.25) drop-shadow(0 0 10px rgba(0, 243, 255, 0.7));
+      }
+      .tech-pill-orange:hover {
+        transform: translateY(-2px);
+        filter: brightness(1.25) drop-shadow(0 0 10px rgba(255, 123, 0, 0.8));
+      }
+    ]]></style>
+
+    <!-- Filters -->
+    <filter id="cyanGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="strongGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="blur1" />
+      <feGaussianBlur stdDeviation="14" result="blur2" />
+      <feMerge>
+        <feMergeNode in="blur2" />
+        <feMergeNode in="blur1" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="orangeGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Background Gradients -->
+    <radialGradient id="bannerBg" cx="50%" cy="50%" r="65%">
+      <stop offset="0%" stop-color="#0a1432" />
+      <stop offset="60%" stop-color="#030814" />
+      <stop offset="100%" stop-color="#010309" />
+    </radialGradient>
+
+    <linearGradient id="gridHorizonFade" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#00f3ff" stop-opacity="0.32" />
+      <stop offset="40%" stop-color="#00f3ff" stop-opacity="0.14" />
+      <stop offset="100%" stop-color="#00f3ff" stop-opacity="0.0" />
+    </linearGradient>
+
+    <!-- Scanlines Pattern -->
+    <pattern id="scanlines" width="100" height="4" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="100" y2="0" stroke="#000000" stroke-width="1.6" opacity="0.45" />
+    </pattern>
+  </defs>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- 1. BASE BACKGROUND & CONTAINER                              -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <rect width="850" height="300" rx="12" fill="url(#bannerBg)" stroke="rgba(0, 243, 255, 0.28)" stroke-width="1.5" />
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- 2. PERSPECTIVE 3D CYBER GRID FLOOR                          -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <g class="grid-pulse" opacity="0.75">
+    <!-- Perspective Converging Lines (Vanishing point: 425, 180) -->
+    <line x1="425" y1="180" x2="-100" y2="300" stroke="url(#gridHorizonFade)" stroke-width="1.2" />
+    <line x1="425" y1="180" x2="20" y2="300" stroke="url(#gridHorizonFade)" stroke-width="1.2" />
+    <line x1="425" y1="180" x2="140" y2="300" stroke="url(#gridHorizonFade)" stroke-width="1.2" />
+    <line x1="425" y1="180" x2="260" y2="300" stroke="url(#gridHorizonFade)" stroke-width="1.2" />
+    <line x1="425" y1="180" x2="380" y2="300" stroke="url(#gridHorizonFade)" stroke-width="1.2" />
+    <line x1="425" y1="180" x2="470" y2="300" stroke="url(#gridHorizonFade)" stroke-width="1.2" />
+    <line x1="425" y1="180" x2="590" y2="300" stroke="url(#gridHorizonFade)" stroke-width="1.2" />
+    <line x1="425" y1="180" x2="710" y2="300" stroke="url(#gridHorizonFade)" stroke-width="1.2" />
+    <line x1="425" y1="180" x2="830" y2="300" stroke="url(#gridHorizonFade)" stroke-width="1.2" />
+    <line x1="425" y1="180" x2="950" y2="300" stroke="url(#gridHorizonFade)" stroke-width="1.2" />
+
+    <!-- Horizontal Distance Rings -->
+    <line x1="0" y1="190" x2="850" y2="190" stroke="rgba(0, 243, 255, 0.06)" stroke-width="1" />
+    <line x1="0" y1="202" x2="850" y2="202" stroke="rgba(0, 243, 255, 0.10)" stroke-width="1" />
+    <line x1="0" y1="217" x2="850" y2="217" stroke="rgba(0, 243, 255, 0.15)" stroke-width="1" />
+    <line x1="0" y1="236" x2="850" y2="236" stroke="rgba(0, 243, 255, 0.20)" stroke-width="1.2" />
+    <line x1="0" y1="260" x2="850" y2="260" stroke="rgba(0, 243, 255, 0.26)" stroke-width="1.4" />
+    <line x1="0" y1="290" x2="850" y2="290" stroke="rgba(0, 243, 255, 0.32)" stroke-width="1.6" />
+  </g>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- 3. NEURAL NETWORK CONSTELLATION (LEFT SIDE)                 -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- Cluster A -->
+  <g class="neural-float-1">
+    <line x1="55" y1="75" x2="135" y2="50" stroke="rgba(0, 243, 255, 0.32)" stroke-width="1.2" />
+    <line x1="135" y1="50" x2="195" y2="110" stroke="rgba(0, 243, 255, 0.40)" stroke-width="1.2" />
+    <line x1="55" y1="75" x2="105" y2="145" stroke="rgba(0, 243, 255, 0.30)" stroke-width="1.2" />
+    <line x1="105" y1="145" x2="195" y2="110" stroke="rgba(255, 123, 0, 0.42)" stroke-width="1.2" />
+    <line x1="105" y1="145" x2="70" y2="215" stroke="rgba(0, 243, 255, 0.35)" stroke-width="1.2" />
+    <line x1="195" y1="110" x2="250" y2="165" stroke="rgba(0, 243, 255, 0.38)" stroke-width="1.2" />
+    <line x1="70" y1="215" x2="160" y2="230" stroke="rgba(0, 243, 255, 0.30)" stroke-width="1.2" />
+    <line x1="160" y1="230" x2="250" y2="165" stroke="rgba(255, 123, 0, 0.38)" stroke-width="1.2" />
+
+    <circle cx="55" cy="75" r="3.5" fill="#00f3ff" filter="url(#cyanGlow)" />
+    <circle cx="135" cy="50" r="4.5" fill="#00f3ff" filter="url(#cyanGlow)" />
+    <circle cx="195" cy="110" r="5" fill="#ff7b00" filter="url(#orangeGlow)" />
+    <circle cx="105" cy="145" r="3.5" fill="#00f3ff" filter="url(#cyanGlow)" />
+    <circle cx="70" cy="215" r="4" fill="#00f3ff" filter="url(#cyanGlow)" />
+    <circle cx="160" cy="230" r="3.5" fill="#00f3ff" filter="url(#cyanGlow)" />
+    <circle cx="250" cy="165" r="5" fill="#ff7b00" filter="url(#orangeGlow)" />
+  </g>
+
+  <!-- Cluster B -->
+  <g class="neural-float-2">
+    <line x1="30" y1="130" x2="55" y2="75" stroke="rgba(0, 243, 255, 0.22)" stroke-width="1" />
+    <line x1="30" y1="130" x2="105" y2="145" stroke="rgba(0, 243, 255, 0.22)" stroke-width="1" />
+    <line x1="135" y1="50" x2="225" y2="45" stroke="rgba(0, 243, 255, 0.25)" stroke-width="1" />
+    <line x1="225" y1="45" x2="285" y2="90" stroke="rgba(0, 243, 255, 0.22)" stroke-width="1" />
+    <line x1="195" y1="110" x2="285" y2="90" stroke="rgba(0, 243, 255, 0.25)" stroke-width="1" />
+    <line x1="250" y1="165" x2="310" y2="200" stroke="rgba(0, 243, 255, 0.25)" stroke-width="1" />
+
+    <circle cx="30" cy="130" r="2.5" fill="#00f3ff" opacity="0.8" />
+    <circle cx="225" cy="45" r="3.5" fill="#ff7b00" filter="url(#orangeGlow)" />
+    <circle cx="285" cy="90" r="3" fill="#00f3ff" opacity="0.85" />
+    <circle cx="310" cy="200" r="3" fill="#00f3ff" opacity="0.85" />
+  </g>
+
+  <!-- Cluster C (Data Pulses) -->
+  <g class="neural-float-3">
+    <circle cx="100" cy="95" r="2" fill="#ffffff" filter="url(#cyanGlow)">
+      <animate attributeName="opacity" values="0.2;1;0.2" dur="2.4s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="180" cy="170" r="2" fill="#ffffff" filter="url(#cyanGlow)">
+      <animate attributeName="opacity" values="1;0.2;1" dur="2s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="150" cy="80" r="2.2" fill="#ff7b00" filter="url(#orangeGlow)">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="1.8s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- 4. HARDWARE CIRCUIT & CPU PROCESSOR (RIGHT SIDE)            -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <g transform="translate(485, 0)">
+    <!-- Circuit Traces -->
+    <g stroke-width="2" fill="none" opacity="0.85">
+      <path d="M225 150 L285 85 L345 85" stroke="#00f3ff" class="circuit-line" />
+      <path d="M225 150 L285 215 L345 215" stroke="#00f3ff" class="circuit-line" />
+      <path d="M225 150 L225 55 L275 55" stroke="#00f3ff" class="circuit-line" />
+      <path d="M225 150 L225 245 L275 245" stroke="#00f3ff" class="circuit-line" />
+      <path d="M185 110 L150 75 L110 75" stroke="#00f3ff" class="circuit-line" />
+      <path d="M185 190 L150 225 L110 225" stroke="#00f3ff" class="circuit-line" />
+
+      <path d="M195 125 L160 90" stroke="#ff7b00" class="circuit-line-delayed" />
+      <path d="M195 175 L160 210" stroke="#ff7b00" class="circuit-line-delayed" />
+      <path d="M255 120 L290 85" stroke="#ff7b00" class="circuit-line-delayed" />
+      <path d="M255 180 L290 215" stroke="#ff7b00" class="circuit-line-delayed" />
+    </g>
+
+    <!-- Circuit Solder Terminal Nodes -->
+    <g fill="#00f3ff" opacity="0.9">
+      <circle cx="345" cy="85" r="3.5" filter="url(#cyanGlow)" />
+      <circle cx="345" cy="215" r="3.5" filter="url(#cyanGlow)" />
+      <circle cx="275" cy="55" r="3" filter="url(#cyanGlow)" />
+      <circle cx="275" cy="245" r="3" filter="url(#cyanGlow)" />
+      <circle cx="110" cy="75" r="3" filter="url(#cyanGlow)" />
+      <circle cx="110" cy="225" r="3" filter="url(#cyanGlow)" />
+      <circle cx="160" cy="90" r="2.5" fill="#ff7b00" filter="url(#orangeGlow)" />
+      <circle cx="160" cy="210" r="2.5" fill="#ff7b00" filter="url(#orangeGlow)" />
+    </g>
+
+    <!-- CPU Outer Base Package -->
+    <rect x="185" y="110" width="80" height="80" rx="4" fill="#050a15" stroke="#00f3ff" stroke-width="2" filter="url(#cyanGlow)" />
+    
+    <!-- CPU Inner Silicon Substrate -->
+    <rect x="195" y="120" width="60" height="60" rx="2" fill="#02040a" stroke="#ff7b00" stroke-width="1.2" />
+
+    <!-- CPU Silicon Die (Pulsing Heart) -->
+    <rect x="210" y="135" width="30" height="30" rx="2" class="cpu-core-pulse" />
+
+    <!-- CPU Peripheral Gold Pins -->
+    <g fill="#00f3ff" opacity="0.9">
+      <!-- Top Pins -->
+      <rect x="195" y="105" width="4" height="5" />
+      <rect x="205" y="105" width="4" height="5" />
+      <rect x="215" y="105" width="4" height="5" />
+      <rect x="225" y="105" width="4" height="5" />
+      <rect x="235" y="105" width="4" height="5" />
+      <rect x="245" y="105" width="4" height="5" />
+
+      <!-- Bottom Pins -->
+      <rect x="195" y="190" width="4" height="5" />
+      <rect x="205" y="190" width="4" height="5" />
+      <rect x="215" y="190" width="4" height="5" />
+      <rect x="225" y="190" width="4" height="5" />
+      <rect x="235" y="190" width="4" height="5" />
+      <rect x="245" y="190" width="4" height="5" />
+
+      <!-- Left Pins -->
+      <rect x="180" y="120" width="5" height="4" />
+      <rect x="180" y="130" width="5" height="4" />
+      <rect x="180" y="140" width="5" height="4" />
+      <rect x="180" y="150" width="5" height="4" />
+      <rect x="180" y="160" width="5" height="4" />
+      <rect x="180" y="170" width="5" height="4" />
+
+      <!-- Right Pins -->
+      <rect x="265" y="120" width="5" height="4" />
+      <rect x="265" y="130" width="5" height="4" />
+      <rect x="265" y="140" width="5" height="4" />
+      <rect x="265" y="150" width="5" height="4" />
+      <rect x="265" y="160" width="5" height="4" />
+      <rect x="265" y="170" width="5" height="4" />
+    </g>
+
+    <!-- Chip Label -->
+    <text x="225" y="175" font-family="'Orbitron', monospace" font-size="5" fill="#a0c4c4" text-anchor="middle" letter-spacing="1">ARCH-404</text>
+  </g>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- 5. CENTER 3D TYPOGRAPHY & SUBTITLE                          -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <g class="title-group">
+    <!-- Deep Layered 3D Extrusion Shadows -->
+    <text class="extrusion" x="425" y="142" fill="#002222">KAMALESH</text>
+    <text class="extrusion" x="425" y="141" fill="#004444">KAMALESH</text>
+    <text class="extrusion" x="425" y="140" fill="#106464">KAMALESH</text>
+    <text class="extrusion" x="425" y="139" fill="#408484">KAMALESH</text>
+    <text class="extrusion" x="425" y="138" fill="#70a4a4">KAMALESH</text>
+    <text class="extrusion" x="425" y="137" fill="#a0c4c4">KAMALESH</text>
+
+    <!-- Main Front 3D Chrome Text -->
+    <text class="title-main" x="425" y="136" filter="url(#cyanGlow)">KAMALESH</text>
+
+    <!-- Glowing Subtitle with Orange Bullet Separators -->
+    <text class="subtitle-text" x="425" y="167" filter="url(#cyanGlow)">
+      AI ENGINEER <tspan fill="#ff7b00" filter="url(#orangeGlow)">•</tspan> GAME ARCHITECT <tspan fill="#ff7b00" filter="url(#orangeGlow)">•</tspan> HARDWARE HACKER
+    </text>
+  </g>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- 6. TECH PILLS ROW (BOTTOM)                                  -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <g transform="translate(100, 240)">
+    <!-- Pill 1: PYTORCH (Cyan) -->
+    <g class="tech-pill" transform="translate(0, 0)">
+      <rect x="0" y="0" width="94" height="26" rx="13" fill="rgba(0, 243, 255, 0.08)" stroke="rgba(0, 243, 255, 0.45)" stroke-width="1.2" />
+      <text class="pill-text" x="47" y="13" fill="#a0e8ff">PYTORCH</text>
+    </g>
+
+    <!-- Pill 2: YOLO (Orange) -->
+    <g class="tech-pill tech-pill-orange" transform="translate(106, 0)">
+      <rect x="0" y="0" width="76" height="26" rx="13" fill="rgba(255, 123, 0, 0.10)" stroke="rgba(255, 123, 0, 0.55)" stroke-width="1.2" />
+      <text class="pill-text" x="38" y="13" fill="#ffd1a0">YOLO</text>
+    </g>
+
+    <!-- Pill 3: GODOT (Cyan) -->
+    <g class="tech-pill" transform="translate(194, 0)">
+      <rect x="0" y="0" width="86" height="26" rx="13" fill="rgba(0, 243, 255, 0.08)" stroke="rgba(0, 243, 255, 0.45)" stroke-width="1.2" />
+      <text class="pill-text" x="43" y="13" fill="#a0e8ff">GODOT</text>
+    </g>
+
+    <!-- Pill 4: ESP32 (Orange) -->
+    <g class="tech-pill tech-pill-orange" transform="translate(292, 0)">
+      <rect x="0" y="0" width="82" height="26" rx="13" fill="rgba(255, 123, 0, 0.10)" stroke="rgba(255, 123, 0, 0.55)" stroke-width="1.2" />
+      <text class="pill-text" x="41" y="13" fill="#ffd1a0">ESP32</text>
+    </g>
+
+    <!-- Pill 5: ROS (Cyan) -->
+    <g class="tech-pill" transform="translate(386, 0)">
+      <rect x="0" y="0" width="74" height="26" rx="13" fill="rgba(0, 243, 255, 0.08)" stroke="rgba(0, 243, 255, 0.45)" stroke-width="1.2" />
+      <text class="pill-text" x="37" y="13" fill="#a0e8ff">ROS</text>
+    </g>
+
+    <!-- Pill 6: C++ / PYTHON (Orange) -->
+    <g class="tech-pill tech-pill-orange" transform="translate(472, 0)">
+      <rect x="0" y="0" width="138" height="26" rx="13" fill="rgba(255, 123, 0, 0.10)" stroke="rgba(255, 123, 0, 0.55)" stroke-width="1.2" />
+      <text class="pill-text" x="69" y="13" fill="#ffd1a0">C++ / PYTHON</text>
+    </g>
+  </g>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- 7. CYBER HUD OVERLAYS & CORNER BRACKETS                     -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- Top Left Corner -->
+  <path d="M8 20 L8 8 L20 8" stroke="#00f3ff" stroke-width="2.5" fill="none" opacity="0.8" />
+  <!-- Top Right Corner -->
+  <path d="M842 20 L842 8 L830 8" stroke="#00f3ff" stroke-width="2.5" fill="none" opacity="0.8" />
+  <!-- Bottom Left Corner -->
+  <path d="M8 280 L8 292 L20 292" stroke="#00f3ff" stroke-width="2.5" fill="none" opacity="0.8" />
+  <!-- Bottom Right Corner -->
+  <path d="M842 280 L842 292 L830 292" stroke="#00f3ff" stroke-width="2.5" fill="none" opacity="0.8" />
+
+  <!-- Target Reticles / Crosshairs -->
+  <g stroke="#00f3ff" stroke-width="1" opacity="0.45">
+    <line x1="30" y1="18" x2="38" y2="18" />
+    <line x1="34" y1="14" x2="34" y2="22" />
+    <line x1="812" y1="18" x2="820" y2="18" />
+    <line x1="816" y1="14" x2="816" y2="22" />
+  </g>
+
+  <!-- HUD Telemetry Tags -->
+  <text class="hud-label" x="46" y="21">SYS_ID // KAMALESH.404 · NEURAL_CORE: ONLINE</text>
+  <text class="hud-label" x="800" y="21" text-anchor="end">LOC: 13.0827°N, 80.2707°E · PORT: 8080</text>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- 8. SCANLINES EFFECT                                         -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <rect width="850" height="300" fill="url(#scanlines)" pointer-events="none" />
+
+</svg>
