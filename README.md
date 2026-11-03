@@ -178,14 +178,14 @@
 ## 🏆 PLAYER PROGRESSION & STATS
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=kamalesh404&show_icons=true&bg_color=0D1117&title_color=FF4500&text_color=B3B3B3&icon_color=FFD700&border_color=FF4500&hide_border=false" height="180"/>
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=kamalesh404&theme=onedark&border_color=FF4500&fire=FF4500&ring=FFD700" height="180"/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=kamalesh404&layout=compact&bg_color=0D1117&title_color=FF4500&text_color=B3B3B3&border_color=FF4500&hide_border=false" height="180"/>
+  <img src="https://github-readme-stats-fast.vercel.app/api?username=kamalesh404&show_icons=true&bg_color=0D1117&title_color=FF4500&text_color=B3B3B3&icon_color=FFD700&border_color=FF4500&hide_border=false" height="180"/>
+  <img src="https://github-readme-streak-stats-eight.vercel.app/?user=kamalesh404&theme=onedark&border_color=FF4500&fire=FF4500&ring=FFD700" height="180"/>
+  <img src="https://github-readme-stats-fast.vercel.app/api/top-langs/?username=kamalesh404&layout=compact&bg_color=0D1117&title_color=FF4500&text_color=B3B3B3&border_color=FF4500&hide_border=false" height="180"/>
 </p>
 
 <p align="center">
   <a href="https://github.com/ryo-ma/github-profile-trophy">
-    <img src="https://github-profile-trophy.vercel.app/?username=kamalesh404&theme=onedark&column=7&margin-w=15&margin-h=15&no-frame=true&no-bg=true" alt="Kamalesh's Trophies" />
+    <img src="https://github-trophies.vercel.app/?username=kamalesh404&theme=onedark&column=7&margin-w=15&margin-h=15&no-frame=true&no-bg=true" alt="Kamalesh's Trophies" />
   </a>
 </p>
 
