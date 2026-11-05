@@ -177,11 +177,13 @@
 
 ## 🏆 PLAYER PROGRESSION & STATS
 
-<p align="center">
-  <img src="https://github-readme-stats-fast.vercel.app/api?username=kamalesh404&show_icons=true&bg_color=0D1117&title_color=FF4500&text_color=B3B3B3&icon_color=FFD700&border_color=FF4500&hide_border=false" height="180"/>
-  <img src="https://github-readme-streak-stats-eight.vercel.app/?user=kamalesh404&theme=onedark&border_color=FF4500&fire=FF4500&ring=FFD700" height="180"/>
-  <img src="https://github-readme-stats-fast.vercel.app/api/top-langs/?username=kamalesh404&layout=compact&bg_color=0D1117&title_color=FF4500&text_color=B3B3B3&border_color=FF4500&hide_border=false" height="180"/>
-</p>
+<div align="center">
+  <img src="https://github-readme-stats-fast.vercel.app/api?username=kamalesh404&show_icons=true&bg_color=0D1117&title_color=FF4500&text_color=B3B3B3&icon_color=FFD700&border_color=FF4500&hide_border=false&rank_icon=github" height="165" />
+  <img src="https://github-readme-streak-stats-eight.vercel.app/?user=kamalesh404&theme=dark&border=FF4500&fire=FF4500&ring=FFD700&currStreakLabel=FF4500" height="165" />
+</div>
+<div align="center">
+  <img src="https://github-readme-stats-fast.vercel.app/api/top-langs?username=kamalesh404&layout=compact&bg_color=0D1117&title_color=FF4500&text_color=B3B3B3&border_color=FF4500&hide_border=false&langs_count=10" height="165" />
+</div>
 
 <p align="center">
   <a href="https://github.com/ryo-ma/github-profile-trophy">
